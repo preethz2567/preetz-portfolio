@@ -18,31 +18,31 @@ const Desktop = () => {
     <>
       <div className="w-screen h-screen bg-transparent">
         <div
-          className="w-screen h-screen flex justify-center items-center -z-10 flex-col overflow-hidden"
+          className="w-full min-h-[100dvh] sm:h-screen flex sm:justify-center items-center sm:items-center flex-col overflow-x-hidden overflow-y-auto sm:overflow-hidden pt-6 pb-24 sm:p-0 relative"
           style={{ background: "var(--color-desktop-bg)" }}
         >
           {/* Desktop Icons - Col 1 (Top on mobile, Left on desktop) */}
-          <div className="flex sm:flex-col flex-row flex-wrap gap-5 sm:gap-6 absolute top-[3%] sm:top-[2%] left-[2%] z-10 w-[96%] sm:w-auto px-2 justify-center sm:justify-start">
+          <div className="relative sm:absolute flex flex-row flex-wrap sm:flex-col gap-4 sm:gap-6 w-[96%] sm:w-auto px-2 justify-center sm:justify-start sm:top-[2%] sm:left-[2%] z-10 mb-8 sm:mb-0">
             {col1.map((menu, i) => (
               <Icon key={menu.name} menu={menu} />
             ))}
           </div>
 
+          {/* Persistent Welcome Window */}
+          {showWelcome && <WelcomeWindow onClose={() => setShowWelcome(false)} />}
+
           {/* Desktop Icons - Col 2 (Bottom on mobile, 2nd Column on desktop) */}
-          <div className="flex sm:flex-col flex-row flex-wrap gap-5 sm:gap-6 absolute bottom-[12%] sm:bottom-auto sm:top-[2%] sm:left-[100px] left-[2%] z-10 w-[96%] sm:w-auto px-2 justify-center sm:justify-start">
+          <div className="relative sm:absolute flex flex-row flex-wrap sm:flex-col gap-4 sm:gap-6 w-[96%] sm:w-auto px-2 justify-center sm:justify-start sm:top-[2%] sm:left-[100px] z-10 mt-8 mb-8 sm:mt-0 sm:mb-0">
             {col2.map((menu, i) => (
               <Icon key={menu.name} menu={menu} />
             ))}
           </div>
-
-          {/* App windows */}
           <AppScreen />
 
-          {/* Persistent Welcome Window */}
-          {showWelcome && <WelcomeWindow onClose={() => setShowWelcome(false)} />}
-
           {/* GitHub Contributions Widget */}
-          <GithubWidget />
+          <div className="relative sm:absolute z-10 mb-10 sm:mb-0 sm:bottom-[10%] sm:right-[5%]">
+            <GithubWidget />
+          </div>
 
           {/* Live Photo Strip */}
           <PhotoStrip />

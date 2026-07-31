@@ -3,7 +3,7 @@ import React from "react";
 const WelcomeWindow = ({ onClose }) => {
   return (
     <div
-      className="absolute flex flex-col z-20 shadow-[1px_1px_0_#333,2px_2px_0_#333] w-[95%] sm:w-[90%] max-w-[600px] top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
+      className="relative sm:absolute flex flex-col z-20 shadow-[1px_1px_0_#333,2px_2px_0_#333] w-[95%] sm:w-[90%] max-w-[600px] sm:top-[50%] sm:left-[50%] sm:-translate-x-1/2 sm:-translate-y-1/2"
       style={{
         height: "auto",
         background: "#000000",

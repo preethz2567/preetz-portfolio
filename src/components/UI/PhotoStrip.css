@@ -44,6 +44,13 @@
   filter: contrast(1.2) sepia(0.2);
 }
 
+@media (max-width: 640px) {
+  .photostrip-item img {
+    width: 140px;
+    height: 100px;
+  }
+}
+
 .photostrip-item:nth-child(even) img {
   filter: grayscale(100%) contrast(1.2);
 }

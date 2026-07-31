@@ -3,15 +3,14 @@ import React from "react";
 const GithubWidget = () => {
   return (
     <div
-      className="absolute flex flex-col z-10 shadow-[1px_1px_0_#333,2px_2px_0_#333] cursor-pointer hover:scale-105 transition-transform"
+      className="flex flex-col z-10 shadow-[1px_1px_0_#333,2px_2px_0_#333] cursor-pointer hover:scale-105 transition-transform"
       style={{
-        bottom: "10%",
-        right: "5%",
         background: "#000000",
         border: "2px solid #555",
         outline: "1px solid #111",
         fontFamily: "'MS Sans Serif', monospace",
         width: "350px",
+        maxWidth: "95vw",
       }}
       onClick={() => window.open("https://github.com/preethz2567", "_blank")}
     >
