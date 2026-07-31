@@ -26,7 +26,7 @@ const WelcomeWindow = ({ onClose }) => {
           <span className="font-bold text-sm tracking-wide">WELCOME.EXE</span>
         </div>
         <button
-          className="flex justify-center items-center cursor-default h-[22px] w-[20px]"
+          className="hidden sm:flex justify-center items-center cursor-default h-[22px] w-[20px]"
           style={{
             background: "#6a2020",
             border: "1px solid #8a3030",

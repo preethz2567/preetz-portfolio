@@ -37,12 +37,13 @@ const Desktop = () => {
               <Icon key={menu.name} menu={menu} />
             ))}
           </div>
-          <AppScreen />
 
-          {/* GitHub Contributions Widget */}
+          {/* GitHub Contributions Widget - after col2 on mobile, bottom-right on desktop */}
           <div className="relative sm:absolute z-10 mb-10 sm:mb-0 sm:bottom-[10%] sm:right-[5%]">
             <GithubWidget />
           </div>
+
+          <AppScreen />
 
           {/* Live Photo Strip */}
           <PhotoStrip />
@@ -59,7 +60,8 @@ const Desktop = () => {
               className="text-xl sm:text-2xl mt-1"
               style={{ color: "var(--color-text-light)", opacity: 0.08 }}
             >
-              Full Stack Developer
+              <span className="sm:hidden">Software Engineer</span>
+              <span className="hidden sm:inline">Full Stack Developer</span>
             </h2>
           </div>
         </div>
