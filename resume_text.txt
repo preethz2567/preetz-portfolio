@@ -1,0 +1,46 @@
+PREETHI D/envel⌢pepreethidurgaprasad@gmail.com
+♂phone-alt+91-9952950125
+/linkedinlinkedin.com/in/preethidurgaprasad67
+/githubgithub.com/preethz2567
+leetcode.com/u/preethz2567/
+Systems-oriented Software developer with a strong foundation in Software Engineering fundamentals. Experienced
+in building, debugging applications and integrating RESTful services, database-backend applications, and event-
+drivenworkflowsthroughhands-onprojects. Interestedinreliablesystemdesign,cleanarchitecture,anddisciplined
+debugging to deliver predictable, scalable software.
+EDUCATION
+2024–2028 B.E. in Computer Science and Engineering, Saveetha Engineering College, Chennai; Current
+CGPA: 9.6/10
+2024 CBSE Class XII, St John’s Senior Secondary School, Chennai; Score: 90.6
+TECHNICAL HIGHLIGHTS AND SKILLS
+Languages: Java, Python, C, SQL
+Frameworks/Libraries SpringBoot, Spring Data JPA/Hibernate, React JS, Kafka(Producer-Consumer work-
+flows)
+Cloud and DevOps AWS (EC2, S3, IAM, CloudWatch), Railway, Vercel
+Tools: Git, Github, Maven, Postman, Eclipse IDE, VScode
+Database MySQL – schema design, transactions
+Soft Skills: Communication, teamwork, problem-solving, patience, leadership
+CERTIFICATIONS AND TRAININGS
+•Oracle Certified Professional: Java SE 21 Developer — Oracle (Nov 2025) Credential
+•JPMorganChase Software Engineering Job Simulation on Forage - January 2026 Credential
+- Built backend components using Spring Boot and Kafka
+- Implemented transaction processing and incentive services
+- Debugged real-world integration issues using logs and breakpoints
+EXPERIENCE
+•Software Development Engineering Intern — Presidio2026 (6 weeks)
+Undergoing structured company training as part of a 6-week SDE internship program, building exposure to
+enterprise software development practices and tooling.
+•SDE Intern — IntakeOff.AIApr–May 2026
+Early-stage AI startup; handled DevOps — CI/CD pipelines, Railway, Vercel deployments, and GitHub branch
+management.
+PROJECT EXPERIENCE
+•DevArchive: Self-Referential Debugging Knowledge Base— Building a backend-driven system to
+store real-world errors encountered during development, annotate them with context, root causes, and fixes,
+and enable structured search and retrieval. Designed to mirror how developers actually debug by learning from
+past failures.Tools: Java, Spring Boot, REST APIs, JPA, MySQL/H2
+•Midas Core Backend System (JP Morgan Chase Forage)— Built and debugged a transaction-
+processing backend handling Kafka-based event ingestion, SQL persistence with JPA, and REST-based service
+integration. Implemented validation logic, incentive-based balance updates, and exposed secure balance-query
+APIs.Tools: Java, Spring Boot, Kafka, JPA (Hibernate), H2, REST APIs
+ACHIEVEMENTS
+•Winner, Ossome Hacks 3.0 [2026] – Github Community SRM
+•Finalist, Fynergy 2025 – IIT Madras
