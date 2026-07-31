@@ -16,7 +16,7 @@ const Desktop = () => {
 
   return (
     <>
-      <div className="w-full h-full bg-transparent overflow-x-hidden">
+      <div className="w-full min-h-screen bg-transparent overflow-x-hidden">
         <div
           className="w-full min-h-[100dvh] sm:h-screen flex sm:justify-center items-center sm:items-center flex-col overflow-x-hidden overflow-y-auto sm:overflow-hidden pt-6 pb-24 sm:p-0 relative"
           style={{ background: "var(--color-desktop-bg)" }}

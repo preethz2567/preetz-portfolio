@@ -50,8 +50,22 @@
     height: 100px;
   }
   .photostrip-container {
-    gap: 65vh;
-    top: -25%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: rotate(-10deg);
+    gap: 0;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .photostrip-track.strip-1 {
+    margin-top: 5vh;
+  }
+  .photostrip-track.strip-2 {
+    margin-bottom: 5vh;
   }
 }
 

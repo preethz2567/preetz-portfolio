@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { motion } from "framer-motion";
 import AppContext from "../../context/AppContext";
 import { isMobileDevice } from "../../util/IsMobileDevice";
 
 const Icon = ({ menu }) => {
   const { state, openApp, activeApp } = useContext(AppContext);
+  const lastTapRef = useRef(0);
 
   const handleOpen = () => {
     if (state[menu.name]) {
@@ -14,6 +15,17 @@ const Icon = ({ menu }) => {
         activeApp(menu.name);
       }
     }
+  };
+
+  const handleTouchEnd = (e) => {
+    const now = Date.now();
+    const timeSince = now - lastTapRef.current;
+    if (timeSince < 300 && timeSince > 0) {
+      // Double tap detected
+      e.preventDefault();
+      handleOpen();
+    }
+    lastTapRef.current = now;
   };
 
   return (
@@ -30,8 +42,8 @@ const Icon = ({ menu }) => {
       drag={isMobileDevice ? false : true}
       dragMomentum={false}
       dragElastic={0.1}
-      onClick={handleOpen}
-      onTouchStart={handleOpen}
+      onDoubleClick={handleOpen}
+      onTouchEnd={handleTouchEnd}
     >
       {/* Icon image with muted grayscale filter */}
       <img
