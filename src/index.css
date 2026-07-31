@@ -35,6 +35,13 @@ body {
   color: var(--color-text-dark);
 }
 
+@media (max-width: 640px) {
+  body {
+    overflow-y: auto;
+    touch-action: pan-y;
+  }
+}
+
 /* ─── Window Button: Clicked (Start / Taskbar) ─── */
 .BtnClicked {
   background-position: 50% 50%;
