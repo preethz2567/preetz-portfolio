@@ -91,7 +91,7 @@ const Hackathons = ({ isMaximized }) => {
       style={{ background: "var(--color-window-content)", color: "var(--color-text-dark)" }}
     >
       <h2
-        className="text-xl font-bold border-b pb-2"
+        className="text-2xl font-bold border-b pb-2"
         style={{ borderColor: "var(--color-border-light)" }}
       >
         Hackathons
@@ -114,33 +114,34 @@ const Hackathons = ({ isMaximized }) => {
               >
                 {h.placement}
               </span>
-              <span className="font-bold text-base">{h.name}</span>
+              <span className="font-bold text-lg">{h.name}</span>
               {h.year && (
-                <span className="text-xs ml-2" style={{ color: "#666" }}>
+                <span className="text-sm ml-2" style={{ color: "#666" }}>
                   ({h.year})
                 </span>
               )}
             </div>
           </div>
           <p
-            className="text-sm mb-3"
+            className="text-base mb-3"
             style={{ color: "var(--color-accent)" }}
           >
             {h.organizer}
           </p>
-          <div className="photo-strip">
+          <div className="photo-strip" style={{ gap: "12px" }}>
             {h.images.map((src, j) => (
               <img 
                 key={j} 
                 src={src} 
                 alt={`${h.name} photo ${j + 1}`} 
-                className="cursor-pointer hover:opacity-80 transition-opacity"
+                style={{ height: "280px", minWidth: "220px", objectFit: "cover", border: "2px solid var(--color-border-light)", cursor: "pointer", flexShrink: 0 }}
+                className="hover:opacity-80 transition-opacity"
                 onClick={() => openImage(src, h.images)}
               />
             ))}
           </div>
           <div className="mt-4">
-            <p className="text-sm italic" style={{ color: "#888" }}>
+            <p className="text-base italic" style={{ color: "#888" }}>
               {h.longDescription ? h.longDescription : "[Add your hackathon experience description here...]"}
             </p>
             {h.linkedinUrl && (

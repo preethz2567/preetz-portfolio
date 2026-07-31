@@ -20,7 +20,7 @@ const Experience = ({ isMaximized }) => {
       style={{ background: "var(--color-window-content)", color: "var(--color-text-dark)" }}
     >
       <h2
-        className="text-xl font-bold border-b pb-2"
+        className="text-2xl font-bold border-b pb-2"
         style={{ borderColor: "var(--color-border-light)" }}
       >
         Work Experience
@@ -35,7 +35,7 @@ const Experience = ({ isMaximized }) => {
         }}
       >
         <div className="flex justify-between items-start flex-wrap gap-1 mb-1">
-          <h3 className="font-bold text-base">Software Development Engineering Intern</h3>
+          <h3 className="font-bold text-lg">Software Development Engineering Intern</h3>
           <span
             className="text-xs px-2 py-0.5"
             style={{ background: "var(--color-accent)", color: "#fff" }}
@@ -44,16 +44,16 @@ const Experience = ({ isMaximized }) => {
           </span>
         </div>
         <p
-          className="text-sm font-semibold mb-2"
+          className="text-base font-semibold mb-2"
           style={{ color: "var(--color-accent)" }}
         >
           Presidio
         </p>
-        <p className="text-sm mb-3">
+        <p className="text-base mb-3">
           Structured SDE training program covering enterprise software development
           practices and tooling.
         </p>
-        <div className="mt-2 text-sm italic" style={{ color: "#888" }}>
+        <div className="mt-2 text-base italic" style={{ color: "#888" }}>
           <ul className="list-disc ml-5 space-y-1">
             <li>Completed a structured, mentor-led software engineering internship with hands-on experience across backend development, frontend engineering, DevOps, cloud infrastructure, and AI/LLM integration.</li>
             <li>Designed and delivered full-stack applications applying modern software engineering best practices.</li>
@@ -84,7 +84,7 @@ const Experience = ({ isMaximized }) => {
         }}
       >
         <div className="flex justify-between items-start flex-wrap gap-1 mb-1">
-          <h3 className="font-bold text-base">SDE Intern</h3>
+          <h3 className="font-bold text-lg">SDE Intern</h3>
           <span
             className="text-xs px-2 py-0.5"
             style={{ background: "var(--color-accent)", color: "#fff" }}
@@ -93,16 +93,16 @@ const Experience = ({ isMaximized }) => {
           </span>
         </div>
         <p
-          className="text-sm font-semibold mb-2"
+          className="text-base font-semibold mb-2"
           style={{ color: "var(--color-accent)" }}
         >
           IntakeOff.AI
         </p>
-        <p className="text-sm mb-3">
+        <p className="text-base mb-3">
           Early-stage AI startup — CI/CD pipelines, Railway &amp; Vercel
           deployments, GitHub branch management.
         </p>
-        <div className="mt-2 text-sm italic" style={{ color: "#888" }}>
+        <div className="mt-2 text-base italic" style={{ color: "#888" }}>
           <ul className="list-disc ml-5 space-y-1">
             <li>Managed the complete DevOps lifecycle, implementing CI/CD pipelines using GitHub Actions and automating deployments with Railway and Vercel.</li>
             <li>Containerised applications with Docker to ensure consistent development and production environments.</li>

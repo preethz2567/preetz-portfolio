@@ -30,7 +30,7 @@ const Icon = ({ menu }) => {
       drag={isMobileDevice ? false : true}
       dragMomentum={false}
       dragElastic={0.1}
-      onDoubleClick={handleOpen}
+      onClick={handleOpen}
       onTouchStart={handleOpen}
     >
       {/* Icon image with muted grayscale filter */}

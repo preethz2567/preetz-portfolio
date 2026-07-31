@@ -58,7 +58,7 @@ const Certifications = ({ isMaximized }) => {
       style={{ background: "var(--color-window-content)", color: "var(--color-text-dark)" }}
     >
       <h2
-        className="text-xl font-bold border-b pb-2"
+        className="text-2xl font-bold border-b pb-2"
         style={{ borderColor: "var(--color-border-light)" }}
       >
         Certifications
@@ -77,18 +77,18 @@ const Certifications = ({ isMaximized }) => {
           <div className="flex items-start gap-3">
             <span className="text-2xl mt-0.5" style={{ flexShrink: 0 }}>🏅</span>
             <div className="flex-1">
-              <h3 className="font-bold text-sm mb-0.5">{cert.title}</h3>
-              <p className="text-xs" style={{ color: "var(--color-accent)" }}>
+              <h3 className="font-bold text-base mb-0.5">{cert.title}</h3>
+              <p className="text-sm" style={{ color: "var(--color-accent)" }}>
                 {cert.issuer}
               </p>
-              <p className="text-xs mt-1" style={{ color: "#888" }}>
+              <p className="text-sm mt-1" style={{ color: "#888" }}>
                 {cert.date}
               </p>
             </div>
           </div>
 
           {/* What I learnt */}
-          <p className="text-xs leading-relaxed italic px-1" style={{ color: "#555", borderLeft: "2px solid var(--color-border-light)", paddingLeft: "8px" }}>
+          <p className="text-sm leading-relaxed italic px-1" style={{ color: "#555", borderLeft: "2px solid var(--color-border-light)", paddingLeft: "8px" }}>
             {cert.learnt}
           </p>
 

@@ -26,7 +26,7 @@ const Education = ({ isMaximized }) => {
       style={{ background: "var(--color-window-content)", color: "var(--color-text-dark)" }}
     >
       <h2
-        className="text-xl font-bold border-b pb-2"
+        className="text-2xl font-bold border-b pb-2"
         style={{ borderColor: "var(--color-border-light)" }}
       >
         Education
@@ -41,7 +41,7 @@ const Education = ({ isMaximized }) => {
         }}
       >
         <div className="flex justify-between items-start flex-wrap gap-1 mb-1">
-          <h3 className="font-bold text-base">
+          <h3 className="font-bold text-lg">
             B.E. Computer Science and Engineering
           </h3>
           <span
@@ -52,15 +52,15 @@ const Education = ({ isMaximized }) => {
           </span>
         </div>
         <p
-          className="text-sm font-semibold mb-1"
+          className="text-base font-semibold mb-1"
           style={{ color: "var(--color-accent)" }}
         >
           Saveetha Engineering College, Chennai
         </p>
-        <p className="text-sm mb-2">
+        <p className="text-base mb-2">
           CGPA <span className="font-bold">9.6 / 10</span>
         </p>
-        <p className="text-sm italic mb-3" style={{ color: "#666" }}>
+        <p className="text-base italic mb-3" style={{ color: "#666" }}>
           [Alongside academics, I actively participate in technical communities, internships, and personal projects that strengthen my practical software engineering skills. I enjoy turning ideas into scalable applications while continuously learning new technologies.]
         </p>
 
@@ -88,7 +88,7 @@ const Education = ({ isMaximized }) => {
         }}
       >
         <div className="flex justify-between items-start flex-wrap gap-1 mb-1">
-          <h3 className="font-bold text-base">CBSE Class XII</h3>
+          <h3 className="font-bold text-lg">CBSE Class XII</h3>
           <span
             className="text-xs px-2 py-0.5"
             style={{ background: "var(--color-accent)", color: "#fff" }}
@@ -97,15 +97,15 @@ const Education = ({ isMaximized }) => {
           </span>
         </div>
         <p
-          className="text-sm font-semibold mb-1"
+          className="text-base font-semibold mb-1"
           style={{ color: "var(--color-accent)" }}
         >
           St. John's Senior Secondary School, Chennai
         </p>
-        <p className="text-sm mb-2">
+        <p className="text-base mb-2">
           Score <span className="font-bold">90.6%</span>
         </p>
-        <p className="text-sm italic mb-3" style={{ color: "#666" }}>
+        <p className="text-base italic mb-3" style={{ color: "#666" }}>
           [Spent 14 years at St. John's Senior Secondary School, where I developed strong academic foundations, leadership skills, and lifelong friendships. My school years shaped my discipline, confidence, and passion for continuous learning.]
         </p>
 
