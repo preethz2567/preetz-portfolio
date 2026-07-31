@@ -49,6 +49,9 @@
     width: 140px;
     height: 100px;
   }
+  .photostrip-container {
+    gap: 45vh;
+  }
 }
 
 .photostrip-item:nth-child(even) img {

@@ -22,7 +22,7 @@ const Desktop = () => {
           style={{ background: "var(--color-desktop-bg)" }}
         >
           {/* Desktop Icons - Col 1 (Top on mobile, Left on desktop) */}
-          <div className="relative sm:absolute flex flex-row flex-wrap sm:flex-col gap-4 sm:gap-6 w-[96%] sm:w-auto px-2 justify-center sm:justify-start sm:top-[2%] sm:left-[2%] z-10 mb-8 sm:mb-0">
+          <div className="relative sm:absolute grid grid-cols-3 sm:flex sm:flex-col gap-4 sm:gap-6 w-[96%] sm:w-auto px-2 place-items-center sm:justify-start sm:top-[2%] sm:left-[2%] z-10 mb-8 sm:mb-0">
             {col1.map((menu, i) => (
               <Icon key={menu.name} menu={menu} />
             ))}
@@ -32,7 +32,7 @@ const Desktop = () => {
           {showWelcome && <WelcomeWindow onClose={() => setShowWelcome(false)} />}
 
           {/* Desktop Icons - Col 2 (Bottom on mobile, 2nd Column on desktop) */}
-          <div className="relative sm:absolute flex flex-row flex-wrap sm:flex-col gap-4 sm:gap-6 w-[96%] sm:w-auto px-2 justify-center sm:justify-start sm:top-[2%] sm:left-[100px] z-10 mt-8 mb-8 sm:mt-0 sm:mb-0">
+          <div className="relative sm:absolute grid grid-cols-3 sm:flex sm:flex-col gap-4 sm:gap-6 w-[96%] sm:w-auto px-2 place-items-center sm:justify-start sm:top-[2%] sm:left-[100px] z-10 mt-8 mb-8 sm:mt-0 sm:mb-0">
             {col2.map((menu, i) => (
               <Icon key={menu.name} menu={menu} />
             ))}
