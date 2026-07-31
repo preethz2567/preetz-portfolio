@@ -50,7 +50,8 @@
     height: 100px;
   }
   .photostrip-container {
-    gap: 45vh;
+    gap: 65vh;
+    top: -25%;
   }
 }
 
