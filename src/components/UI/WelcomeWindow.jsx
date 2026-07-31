@@ -25,17 +25,7 @@ const WelcomeWindow = ({ onClose }) => {
           <img src="/assets/start.ico" alt="icon" className="w-4 h-4" style={{ filter: "grayscale(100%) brightness(200%)" }} />
           <span className="font-bold text-sm tracking-wide">WELCOME.EXE</span>
         </div>
-        <button
-          className="hidden sm:flex justify-center items-center cursor-default h-[22px] w-[20px]"
-          style={{
-            background: "#6a2020",
-            border: "1px solid #8a3030",
-            color: "#fff",
-          }}
-          onClick={onClose}
-        >
-          <img src="/assets/close.svg" alt="close" className="w-[10px]" />
-        </button>
+
       </div>
 
       {/* Content - Pure Black, Pixelated */}

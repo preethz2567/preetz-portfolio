@@ -60,8 +60,7 @@ const Desktop = () => {
               className="text-xl sm:text-2xl mt-1"
               style={{ color: "var(--color-text-light)", opacity: 0.08 }}
             >
-              <span className="sm:hidden">Software Engineer</span>
-              <span className="hidden sm:inline">Full Stack Developer</span>
+              <span>Software Engineer</span>
             </h2>
           </div>
         </div>
