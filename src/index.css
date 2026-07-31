@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: MS Sans;
+  src: url(/assets/MS\ Sans\ Serif\ 8pt.ttf);
+}
+
+/* ─────────────────────────────────────────────
+   Professional Palette – CSS Custom Properties
+───────────────────────────────────────────── */
+:root {
+  --color-desktop-bg:      #000000;   /* deep charcoal desktop */
+  --color-window-chrome:   #24272e;   /* window chrome / title bar */
+  --color-window-content:  #f5f5f4;   /* warm off-white content bg */
+  --color-text-dark:       #1a1d23;   /* primary text on light bg */
+  --color-text-light:      #e8e8e6;   /* primary text on dark bg */
+  --color-accent:          #4a6b8a;   /* muted steel blue accent */
+  --color-taskbar-bg:      #000000;   /* near-black taskbar */
+  --color-border-light:    #d4d4d2;   /* border on light surfaces */
+  --color-border-dark:     #383b42;   /* border on dark surfaces */
+  --color-btn-face:        #2e3139;   /* button face (chrome buttons) */
+  --color-btn-highlight:   #4a4f5a;   /* button hover */
+  --color-active-title:    #4a6b8a;   /* active window title bar */
+  --color-inactive-title:  #2e3139;   /* inactive window title bar */
+}
+
+body {
+  font-family: MS Sans, sans-serif;
+  overflow: hidden;
+  cursor: default;
+  touch-action: none;
+  background-color: var(--color-desktop-bg);
+  color: var(--color-text-dark);
+}
+
+/* ─── Window Button: Clicked (Start / Taskbar) ─── */
+.BtnClicked {
+  background-position: 50% 50%;
+  background: repeating-conic-gradient(#3a3f4a 0 25%, #1a1d23 0 50%) 50%/2px 2px;
+  border-color: #000 #4a6b8a #4a6b8a #000;
+  border-radius: 0.5px;
+  border-width: 1px;
+  box-sizing: border-box;
+  outline: 1px solid var(--color-accent);
+  border-style: solid;
+}
+
+/* ─── Maximized Window ─── */
+.appMaximized {
+  transform: translateX(0) translateY(0) !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 40px);
+}
+
+.appContentHeightInMin {
+  height: calc(99% - 40px);
+  margin: 1px 0;
+}
+
+.appContentHeightInMax {
+  height: calc(100% - 40px);
+}
+
+/* ─── Scrollbar Styling ─── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-window-content);
+}
+::-webkit-scrollbar-thumb {
+  background: #b0b3b8;
+  border: 1px solid var(--color-border-light);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ─── Photo gallery strip ─── */
+.photo-strip {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 6px 0;
+}
+.photo-strip img {
+  height: 110px;
+  width: auto;
+  object-fit: cover;
+  border: 2px solid var(--color-border-light);
+  flex-shrink: 0;
+}
+
+/* ─── Photo grid ─── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+}
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 2px solid var(--color-border-light);
+}
+
+/* ─── Tab styling ─── */
+.win-tab {
+  padding: 4px 14px;
+  font-size: 13px;
+  cursor: default;
+  border: 1px solid var(--color-border-dark);
+  background: var(--color-btn-face);
+  color: var(--color-text-light);
+  user-select: none;
+}
+.win-tab.active {
+  background: var(--color-window-content);
+  color: var(--color-text-dark);
+  border-bottom: 1px solid var(--color-window-content);
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Hackathon trophy badge ─── */
+.trophy-badge {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 8px;
+  letter-spacing: 0.04em;
+}
+
+/* ─── Placeholder box ─── */
+.photo-placeholder {
+  border: 2px dashed var(--color-border-dark);
+  background: #f0f0ee;
+  color: #888;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  text-align: center;
+  padding: 8px;
+}
