@@ -21,7 +21,7 @@ const AppScreenFrame = ({
 
   return (
     <motion.div
-      className={`absolute border ${
+      className={`absolute border mobileMaximized ${
         isActive ? "z-50" : isMinimized ? "-z-50" : "z-10"
       } ${
         isMaximized

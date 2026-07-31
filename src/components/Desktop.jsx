@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import AppScreen from "./AppScreen";
 import Icon from "./UI/Icon";
 import { Menu } from "../content/menu";
@@ -8,6 +9,7 @@ import ImageViewer from "./UI/ImageViewer";
 import GithubWidget from "./UI/GithubWidget";
 
 const Desktop = () => {
+  const [showWelcome, setShowWelcome] = useState(true);
   // Split menu into two columns so icons don't overflow vertically on small screens
   const col1 = Menu.slice(0, Math.ceil(Menu.length / 2));
   const col2 = Menu.slice(Math.ceil(Menu.length / 2));
@@ -19,14 +21,14 @@ const Desktop = () => {
           className="w-screen h-screen flex justify-center items-center -z-10 flex-col overflow-hidden"
           style={{ background: "var(--color-desktop-bg)" }}
         >
-          {/* Desktop icons — two column layout */}
-          <div className="flex flex-row gap-4 sm:gap-6 absolute top-[2%] left-[2%] z-10">
-            <div className="flex flex-col gap-5 sm:gap-6">
+          {/* Desktop icons — horizontal wrap on mobile, two columns on desktop */}
+          <div className="flex sm:flex-row flex-wrap sm:flex-nowrap gap-4 sm:gap-6 absolute top-[5%] sm:top-[2%] left-[2%] z-10 w-[96%] sm:w-auto px-2">
+            <div className="flex sm:flex-col flex-row flex-wrap gap-5 sm:gap-6 justify-center w-full sm:w-auto">
               {col1.map((menu, i) => (
                 <Icon key={menu.name} menu={menu} />
               ))}
             </div>
-            <div className="flex flex-col gap-5 sm:gap-6">
+            <div className="flex sm:flex-col flex-row flex-wrap gap-5 sm:gap-6 justify-center w-full sm:w-auto">
               {col2.map((menu, i) => (
                 <Icon key={menu.name} menu={menu} />
               ))}
@@ -37,7 +39,7 @@ const Desktop = () => {
           <AppScreen />
 
           {/* Persistent Welcome Window */}
-          <WelcomeWindow />
+          {showWelcome && <WelcomeWindow onClose={() => setShowWelcome(false)} />}
 
           {/* GitHub Contributions Widget */}
           <GithubWidget />

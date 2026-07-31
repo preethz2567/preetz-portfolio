@@ -1,16 +1,11 @@
 import React from "react";
 
-const WelcomeWindow = () => {
+const WelcomeWindow = ({ onClose }) => {
   return (
     <div
-      className="absolute flex flex-col z-20 shadow-[1px_1px_0_#333,2px_2px_0_#333]"
+      className="absolute flex flex-col z-20 shadow-[1px_1px_0_#333,2px_2px_0_#333] w-[95%] sm:w-[90%] max-w-[600px] bottom-[10%] sm:bottom-auto sm:top-[50%] left-[50%] -translate-x-1/2 sm:-translate-y-1/2"
       style={{
-        width: "90%",
-        maxWidth: "600px",
         height: "auto",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
         background: "#000000",
         border: "2px solid #555",
         outline: "1px solid #111",
@@ -30,34 +25,45 @@ const WelcomeWindow = () => {
           <img src="/assets/start.ico" alt="icon" className="w-4 h-4" style={{ filter: "grayscale(100%) brightness(200%)" }} />
           <span className="font-bold text-sm tracking-wide">WELCOME.EXE</span>
         </div>
+        <button
+          className="flex justify-center items-center cursor-default h-[22px] w-[20px]"
+          style={{
+            background: "#6a2020",
+            border: "1px solid #8a3030",
+            color: "#fff",
+          }}
+          onClick={onClose}
+        >
+          <img src="/assets/close.svg" alt="close" className="w-[10px]" />
+        </button>
       </div>
 
       {/* Content - Pure Black, Pixelated */}
       <div
-        className="flex sm:flex-row flex-col items-center gap-6 p-6"
+        className="flex sm:flex-row flex-col items-center gap-4 sm:gap-6 p-4 sm:p-6"
         style={{ background: "#000000", color: "#ffffff" }}
       >
         <img
           src="/assets/images/me-main.jpg"
           alt="Preethi Durgaprasad profile photo"
-          className="w-40 h-56 object-cover"
+          className="w-24 h-32 sm:w-40 sm:h-56 object-cover"
           style={{
             border: "2px solid #333",
             boxShadow: "2px 2px 0px #ffffff",
             objectPosition: "top center",
           }}
         />
-        <div className="text-left space-y-3 flex-1 text-[22px]">
+        <div className="text-left space-y-2 flex-1 text-[16px] sm:text-[22px]">
           <h2 
-            className="text-4xl sm:text-5xl font-bold font-['VT323']"
-            style={{ wordSpacing: "-8px" }}
+            className="text-2xl sm:text-4xl md:text-5xl font-bold font-['VT323']"
+            style={{ wordSpacing: "-4px" }}
           >
           Preethi Durgaprasad
         </h2>
           <p className="leading-tight" style={{ color: "#cccccc" }}>
             &gt; INIT SYSTEM... OK<br/>
             &gt; Welcome to my digital workspace!<br/>
-            &gt; I'm a systems-oriented software developer.<br/>
+            <span className="hidden sm:inline">&gt; I'm a systems-oriented software developer.<br/></span>
             &gt; Feel free to look around and explore my projects and experience.
           </p>
         </div>
