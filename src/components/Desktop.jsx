@@ -21,18 +21,18 @@ const Desktop = () => {
           className="w-screen h-screen flex justify-center items-center -z-10 flex-col overflow-hidden"
           style={{ background: "var(--color-desktop-bg)" }}
         >
-          {/* Desktop icons — horizontal wrap on mobile, two columns on desktop */}
-          <div className="flex sm:flex-row flex-wrap sm:flex-nowrap gap-4 sm:gap-6 absolute top-[5%] sm:top-[2%] left-[2%] z-10 w-[96%] sm:w-auto px-2">
-            <div className="flex sm:flex-col flex-row flex-wrap gap-5 sm:gap-6 justify-center w-full sm:w-auto">
-              {col1.map((menu, i) => (
-                <Icon key={menu.name} menu={menu} />
-              ))}
-            </div>
-            <div className="flex sm:flex-col flex-row flex-wrap gap-5 sm:gap-6 justify-center w-full sm:w-auto">
-              {col2.map((menu, i) => (
-                <Icon key={menu.name} menu={menu} />
-              ))}
-            </div>
+          {/* Desktop Icons - Col 1 (Top on mobile, Left on desktop) */}
+          <div className="flex sm:flex-col flex-row flex-wrap gap-5 sm:gap-6 absolute top-[3%] sm:top-[2%] left-[2%] z-10 w-[96%] sm:w-auto px-2 justify-center sm:justify-start">
+            {col1.map((menu, i) => (
+              <Icon key={menu.name} menu={menu} />
+            ))}
+          </div>
+
+          {/* Desktop Icons - Col 2 (Bottom on mobile, 2nd Column on desktop) */}
+          <div className="flex sm:flex-col flex-row flex-wrap gap-5 sm:gap-6 absolute bottom-[12%] sm:bottom-auto sm:top-[2%] sm:left-[100px] left-[2%] z-10 w-[96%] sm:w-auto px-2 justify-center sm:justify-start">
+            {col2.map((menu, i) => (
+              <Icon key={menu.name} menu={menu} />
+            ))}
           </div>
 
           {/* App windows */}
