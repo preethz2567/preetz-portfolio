@@ -42,14 +42,14 @@ const About = ({ isMaximized }) => {
             Preethi D
           </h2>
           <h3
-            className={`font-bold ${isMaximized ? "text-2xl" : "text-base"}`}
+            className={`font-bold ${isMaximized ? "text-3xl" : "text-xl"}`}
             style={{ color: "var(--color-accent)" }}
           >
             Software Engineer
           </h3>
           <p
-            className="text-sm mt-1"
-            style={{ color: "#666" }}
+            className="text-base mt-1"
+            style={{ color: "var(--color-text-dark)" }}
           >
             📍 Tamil Nadu, India
           </p>
@@ -59,53 +59,51 @@ const About = ({ isMaximized }) => {
       {/* ─── About Bio ─── */}
       <div>
         <h4
-          className="font-bold text-sm uppercase mb-2"
+          className="font-bold text-base uppercase mb-2"
           style={{ color: "var(--color-accent)" }}
         >
           About Me
         </h4>
-        <p className="text-sm leading-relaxed">
+        <p className="text-base leading-relaxed">
           Systems-oriented Software developer with a strong foundation in Software Engineering fundamentals. Experienced in building, debugging applications and integrating RESTful services, database-backend applications, and event-driven workflows through hands-on projects. Interested in reliable system design, clean architecture, and disciplined debugging to deliver predictable, scalable software.
-          {!seeMore && (
-            <span
-              className="ms-2 cursor-pointer"
-              style={{ color: "var(--color-accent)" }}
-              onClick={() => setSeeMore(true)}
-            >
-              see more…
-            </span>
-          )}
         </p>
         {seeMore && (
           <>
-            <p className="text-sm leading-relaxed mt-4">
+            <p className="text-base leading-relaxed mt-4">
               I am currently pursuing my B.E. in Computer Science and Engineering at Saveetha Engineering College, Chennai (2024–2028).I thrive on the challenges that come with building innovative applications.
             </p>
-            <p className="text-sm leading-relaxed mt-4">
+            <p className="text-base leading-relaxed mt-4">
               Lastly, I am a huge fan of working with like-minded individuals, as
-              collaboration fuels my creativity and helps me grow both personally
-              and professionally.{" "}
-              <span
-                className="cursor-pointer"
-                style={{ color: "var(--color-accent)" }}
-                onClick={() => setSeeMore(false)}
-              >
-                (hide)
-              </span>
+              I firmly believe that one's surroundings greatly influence their
+              personal and professional growth.
             </p>
           </>
         )}
+        <button
+          className="mt-4 px-3 py-1 text-sm bg-gray-200 border border-gray-400 hover:bg-gray-300 transition-colors"
+          style={{
+            background: "var(--color-btn-face)",
+            color: "var(--color-text-dark)",
+            borderTop: "2px solid #fff",
+            borderLeft: "2px solid #fff",
+            borderBottom: "2px solid var(--color-border-dark)",
+            borderRight: "2px solid var(--color-border-dark)",
+          }}
+          onClick={() => setSeeMore(!seeMore)}
+        >
+          {seeMore ? "Show Less" : "See More..."}
+        </button>
       </div>
 
       {/* ─── Community Involvement ─── */}
       <div>
         <h4
-          className="font-bold text-sm uppercase mb-1"
+          className="font-bold text-base uppercase mb-1"
           style={{ color: "var(--color-accent)" }}
         >
           Community Involvement
         </h4>
-        <p className="text-sm mb-3" style={{ color: "#555" }}>
+        <p className="text-base mb-3" style={{ color: "#555" }}>
           Active participation in tech community meetups and events.
         </p>
         <div className="photo-grid">

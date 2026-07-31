@@ -48,9 +48,12 @@ const WelcomeWindow = () => {
           }}
         />
         <div className="text-left space-y-3 flex-1 text-[22px]">
-          <h2 className="text-3xl font-bold uppercase tracking-widest" style={{ textShadow: "1px 1px 0px #555555" }}>
-            Preethi Durgaprasad
-          </h2>
+          <h2 
+            className="text-4xl sm:text-5xl font-bold font-['VT323']"
+            style={{ wordSpacing: "-8px" }}
+          >
+          Preethi Durgaprasad
+        </h2>
           <p className="leading-tight" style={{ color: "#cccccc" }}>
             &gt; INIT SYSTEM... OK<br/>
             &gt; Welcome to my digital workspace!<br/>

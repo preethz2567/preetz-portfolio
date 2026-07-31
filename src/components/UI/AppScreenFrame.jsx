@@ -26,7 +26,7 @@ const AppScreenFrame = ({
       } ${
         isMaximized
           ? "appMaximized"
-          : "w-[85%] sm:w-[600px] h-[65vh] sm:h-[75vh] max-h-[600px]"
+          : "w-[90%] sm:w-[800px] h-[75vh] sm:h-[80vh] max-h-[750px]"
       }`}
       style={{
         background: "var(--color-window-chrome)",
