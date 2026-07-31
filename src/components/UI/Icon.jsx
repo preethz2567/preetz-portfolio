@@ -1,11 +1,12 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import AppContext from "../../context/AppContext";
 import { isMobileDevice } from "../../util/IsMobileDevice";
 
 const Icon = ({ menu }) => {
   const { state, openApp, activeApp } = useContext(AppContext);
-  const lastTapRef = useRef(0);
+  const [selected, setSelected] = useState(false);
+  const resetTimer = useRef(null);
 
   const handleOpen = () => {
     if (state[menu.name]) {
@@ -17,15 +18,23 @@ const Icon = ({ menu }) => {
     }
   };
 
-  const handleTouchEnd = (e) => {
-    const now = Date.now();
-    const timeSince = now - lastTapRef.current;
-    if (timeSince < 300 && timeSince > 0) {
-      // Double tap detected
-      e.preventDefault();
-      handleOpen();
+  const handleClick = () => {
+    if (isMobileDevice) {
+      if (!selected) {
+        // First tap: select the icon
+        setSelected(true);
+        // Auto-deselect after 2 seconds of inactivity
+        clearTimeout(resetTimer.current);
+        resetTimer.current = setTimeout(() => setSelected(false), 2000);
+      } else {
+        // Second tap: open the app
+        setSelected(false);
+        clearTimeout(resetTimer.current);
+        handleOpen();
+      }
+    } else {
+      // Desktop: single click just focuses
     }
-    lastTapRef.current = now;
   };
 
   return (
@@ -33,17 +42,19 @@ const Icon = ({ menu }) => {
       aria-label={menu.name}
       tabIndex="-1"
       className="flex flex-col items-center z-10 gap-1 rounded-sm px-1 py-1 focus-within:outline"
+      drag={isMobileDevice ? false : true}
+      dragMomentum={false}
+      dragElastic={0.1}
+      onDoubleClick={handleOpen}
+      onClick={handleClick}
       style={{
         outlineColor: "var(--color-accent)",
         outlineOffset: "2px",
         userSelect: "none",
         cursor: "default",
+        outline: selected ? "1px solid var(--color-accent)" : undefined,
+        backgroundColor: selected ? "rgba(255,255,255,0.08)" : undefined,
       }}
-      drag={isMobileDevice ? false : true}
-      dragMomentum={false}
-      dragElastic={0.1}
-      onDoubleClick={handleOpen}
-      onTouchEnd={handleTouchEnd}
     >
       {/* Icon image with muted grayscale filter */}
       <img
