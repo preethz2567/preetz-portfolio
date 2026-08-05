@@ -31,6 +31,7 @@ const GithubWidget = () => {
           src="https://ghchart.rshah.org/298C5E/preethz2567"
           alt="GitHub Contributions"
           style={{ width: "100%", filter: "contrast(1.5) grayscale(0.2)" }}
+          referrerPolicy="no-referrer"
         />
       </div>
     </div>
