@@ -34,6 +34,7 @@ const initialState = {
   Resume:       { ...defaultAppState },
   Journey:      { ...defaultAppState },
   Socials:      { ...defaultAppState },
+  "Terminal.exe": { ...defaultAppState },
   previouslyActiveApp: "",
   taskbarAppStack: [],
   activeImage: null,

@@ -14,6 +14,7 @@ import Certifications from "./Apps/Certifications";
 import Resume from "./Apps/Resume";
 import Journey from "./Apps/Journey";
 import Socials from "./Apps/Socials";
+import Terminal from "./Apps/Terminal";
 
 // Build a lookup: appName → { component, menuIndex }
 const menuByName = Object.fromEntries(Menu.map((m, i) => [m.name, { info: m, i }]));
@@ -31,6 +32,7 @@ const AppContentMap = {
   Resume:       Resume,
   Journey:      Journey,
   Socials:      Socials,
+  "Terminal.exe": Terminal,
 };
 
 const AppScreen = () => {
