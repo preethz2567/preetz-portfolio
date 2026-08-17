@@ -5,7 +5,7 @@ const certs = [
     date: "November 2025",
     credentialLink: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=C4E5128DEB5BA10E25D9302F14A08F4C496E416281260C6145F322AE6118AECA",
     imagePath: "/assets/Certificates/Java_Oracle%20Certificate.jpg",
-    learnt: "Mastered core Java SE 21 concepts including records, sealed classes, pattern matching, and virtual threads. Gained deep knowledge of OOP, generics, concurrency, and JVM internals.",
+    learnt: "This certification validates advanced proficiency in Java programming, including object-oriented design, concurrency, and modern Java APIs. Demonstrates strong skills in software development, debugging, and application optimization aligned with industry standards.",
   },
   {
     title: "JPMorganChase Software Engineering Job Simulation",
