@@ -35,6 +35,7 @@ const initialState = {
   Journey:      { ...defaultAppState },
   Socials:      { ...defaultAppState },
   "Terminal.exe": { ...defaultAppState },
+  "Minesweeper.exe": { ...defaultAppState },
   previouslyActiveApp: "",
   taskbarAppStack: [],
   activeImage: null,
