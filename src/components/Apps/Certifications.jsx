@@ -4,7 +4,7 @@ const certs = [
     issuer: "Oracle",
     date: "November 2025",
     credentialLink: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=C4E5128DEB5BA10E25D9302F14A08F4C496E416281260C6145F322AE6118AECA",
-    pdfPath: "/assets/certifications/oracle-java-se21.pdf",
+    pdfPath: "/assets/Certificates/Java_Oracle%20Certificate.pdf",
     learnt: "Mastered core Java SE 21 concepts including records, sealed classes, pattern matching, and virtual threads. Gained deep knowledge of OOP, generics, concurrency, and JVM internals.",
   },
   {
@@ -12,7 +12,7 @@ const certs = [
     issuer: "Forage / JPMorganChase",
     date: "January 2026",
     credentialLink: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_z2adLihTnFkJrvrAy_1769088241559_completion_certificate.pdf",
-    pdfPath: null,
+    pdfPath: "/assets/Certificates/JPMorganForage.pdf",
     learnt: "Built backend components using Spring Boot and Kafka. Implemented transaction processing and incentive services. Debugged real-world integration issues using logs and breakpoints.",
   },
   {
@@ -20,33 +20,25 @@ const certs = [
     issuer: "IBM / CourseEra",
     date: "January 2025",
     credentialLink: "https://www.coursera.org/account/accomplishments/verify/7F57YW0Z21ST",
-    pdfPath: "/assets/certifications/cert3.pdf",
+    pdfPath: null,
     learnt: "[Mastered core OOP principles in Java: classes/objects, inheritance, polymorphism, encapsulation, abstraction, plus interfaces and abstract classes.]",
   },
   {
-    title: "Deloitte Technology Job Silumation",
+    title: "Deloitte Technology Job Simulation",
     issuer: "Deloitte/Forage",
-    date: "June2026",
+    date: "June 2026",
     credentialLink: "https://drive.google.com/file/d/11L-WYpvvnBmthPxhI4IPNfmdQ2mjq9sG/view?usp=sharing",
-    pdfPath: "/assets/certifications/cert4.pdf",
+    pdfPath: "/assets/Certificates/Deloitte%20Tech%20Job%20Simulation%20-%20Certficate%20Of%20Completion.pdf",
     learnt: "[Completed a job simulation involving development and coding, Wrote a proposal for creating a dashboard ]",
   },
   {
-    title: "Placeholder Certification 5",
-    issuer: "Issuer Name",
-    date: "Month Year",
+    title: "Oracle Cloud Infrastructure Certificate",
+    issuer: "Oracle",
+    date: "",
     credentialLink: null,
-    pdfPath: "/assets/certifications/cert5.pdf",
-    learnt: "[Add what you learnt from this certification here...]",
-  },
-  {
-    title: "Placeholder Certification 6",
-    issuer: "Issuer Name",
-    date: "Month Year",
-    credentialLink: null,
-    pdfPath: "/assets/certifications/cert6.pdf",
-    learnt: "[Add what you learnt from this certification here...]",
-  },
+    pdfPath: "/assets/Certificates/Preethi%20D%20-%20Oracle%20Cloud%20Infrastructure%20Certificate.pdf",
+    learnt: "Gained foundational knowledge of Oracle Cloud Infrastructure services, networking, and cloud architecture.",
+  }
 ];
 
 const Certifications = ({ isMaximized }) => {
