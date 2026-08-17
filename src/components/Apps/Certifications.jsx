@@ -4,7 +4,7 @@ const certs = [
     issuer: "Oracle",
     date: "November 2025",
     credentialLink: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=C4E5128DEB5BA10E25D9302F14A08F4C496E416281260C6145F322AE6118AECA",
-    pdfPath: "/assets/Certificates/Java_Oracle%20Certificate.pdf",
+    imagePath: "/assets/Certificates/Java_Oracle%20Certificate.jpg",
     learnt: "Mastered core Java SE 21 concepts including records, sealed classes, pattern matching, and virtual threads. Gained deep knowledge of OOP, generics, concurrency, and JVM internals.",
   },
   {
@@ -12,7 +12,7 @@ const certs = [
     issuer: "Forage / JPMorganChase",
     date: "January 2026",
     credentialLink: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_z2adLihTnFkJrvrAy_1769088241559_completion_certificate.pdf",
-    pdfPath: "/assets/Certificates/JPMorganForage.pdf",
+    imagePath: "/assets/Certificates/JPMorganForage.jpg",
     learnt: "Built backend components using Spring Boot and Kafka. Implemented transaction processing and incentive services. Debugged real-world integration issues using logs and breakpoints.",
   },
   {
@@ -20,7 +20,7 @@ const certs = [
     issuer: "IBM / CourseEra",
     date: "January 2025",
     credentialLink: "https://www.coursera.org/account/accomplishments/verify/7F57YW0Z21ST",
-    pdfPath: null,
+    imagePath: "/assets/Certificates/IBM-Oops%20JAVA.jpg",
     learnt: "[Mastered core OOP principles in Java: classes/objects, inheritance, polymorphism, encapsulation, abstraction, plus interfaces and abstract classes.]",
   },
   {
@@ -28,7 +28,7 @@ const certs = [
     issuer: "Deloitte/Forage",
     date: "June 2026",
     credentialLink: "https://drive.google.com/file/d/11L-WYpvvnBmthPxhI4IPNfmdQ2mjq9sG/view?usp=sharing",
-    pdfPath: "/assets/Certificates/Deloitte%20Tech%20Job%20Simulation%20-%20Certficate%20Of%20Completion.pdf",
+    imagePath: "/assets/Certificates/Deloitte%20Tech%20Job%20Simulation%20-%20Certficate%20Of%20Completion.jpg",
     learnt: "[Completed a job simulation involving development and coding, Wrote a proposal for creating a dashboard ]",
   },
   {
@@ -36,7 +36,7 @@ const certs = [
     issuer: "Oracle",
     date: "",
     credentialLink: null,
-    pdfPath: "/assets/Certificates/Preethi%20D%20-%20Oracle%20Cloud%20Infrastructure%20Certificate.pdf",
+    imagePath: "/assets/Certificates/Preethi%20D%20-%20Oracle%20Cloud%20Infrastructure%20Certificate.jpg",
     learnt: "Gained foundational knowledge of Oracle Cloud Infrastructure services, networking, and cloud architecture.",
   }
 ];
@@ -102,9 +102,9 @@ const Certifications = ({ isMaximized }) => {
                 🔗 View Credential
               </a>
             )}
-            {cert.pdfPath && (
+            {cert.imagePath && (
               <a
-                href={cert.pdfPath}
+                href={cert.imagePath}
                 target="_blank"
                 rel="noreferrer"
                 className="px-3 py-1 text-xs font-bold"
@@ -115,18 +115,17 @@ const Certifications = ({ isMaximized }) => {
                   border: "1px solid var(--color-border-dark)",
                 }}
               >
-                📄 View Certificate PDF
+                🖼️ View Certificate
               </a>
             )}
           </div>
           
-          {cert.pdfPath && (
+          {cert.imagePath && (
             <div className="mt-3" style={{ border: "1px solid var(--color-border-dark)" }}>
-              <iframe
-                src={cert.pdfPath}
-                title={`${cert.title} Certificate`}
-                className="w-full h-64 sm:h-96"
-                frameBorder="0"
+              <img
+                src={cert.imagePath}
+                alt={`${cert.title} Certificate`}
+                className="w-full h-auto"
               />
             </div>
           )}
