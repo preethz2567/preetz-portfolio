@@ -21,7 +21,7 @@ const certs = [
     date: "January 2025",
     credentialLink: "https://www.coursera.org/account/accomplishments/verify/7F57YW0Z21ST",
     imagePath: "/assets/Certificates/IBM-Oops%20JAVA.jpg",
-    learnt: "[Mastered core OOP principles in Java: classes/objects, inheritance, polymorphism, encapsulation, abstraction, plus interfaces and abstract classes.]",
+    learnt: "Mastered core OOP principles in Java: classes/objects, inheritance, polymorphism, encapsulation, abstraction, plus interfaces and abstract classes. Applied concepts through hands-on coding exercises to design robust, maintainable Java applications using industry-standard OOP patterns.",
   },
   {
     title: "Deloitte Technology Job Simulation",
