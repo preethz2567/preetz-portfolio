@@ -78,6 +78,18 @@ const hackathons = [
       "/assets/images/hackathon7-img3.jpeg",
     ],
   },
+  {
+    placement: "🏆 1st Prize",
+    name: "SheBuilds x CCCL Hack",
+    organizer: "Intellexa REC, powered by Claude Code Central London",
+    year: "2026",
+    longDescription: "All women hackathon. Built Muthirai, an enterprise-grade brand identity enforcement and drift analytics platform acting as a cryptographic seal of authenticity.",
+    images: [
+      "/assets/images/hackathon8-img1.jpg",
+      "/assets/images/hackathon8-img2.jpg",
+      "/assets/images/hackathon8-img3.jpg",
+    ],
+  },
 ];
 
 const Hackathons = ({ isMaximized }) => {

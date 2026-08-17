@@ -69,9 +69,6 @@
   }
 }
 
-.photostrip-item:nth-child(even) img {
-  filter: grayscale(100%) contrast(1.2);
-}
 
 @keyframes scroll-strip-left {
   0% {
