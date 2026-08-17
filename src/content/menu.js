@@ -90,4 +90,11 @@ export const Menu = [
         headerIconSize: "h-[22px] w-[22px]",
         startIconSize: "w-[22px] h-[22px]"
     },
+    {
+        name: "Minesweeper.exe",
+        path: "/assets/projects.png", // We can use projects.png or find a bomb icon later
+        deskIconSize: "w-[42px] h-[42px]",
+        headerIconSize: "h-[22px] w-[22px]",
+        startIconSize: "w-[22px] h-[22px]"
+    }
 ];
