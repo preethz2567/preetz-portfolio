@@ -127,6 +127,17 @@ const Certifications = ({ isMaximized }) => {
               </a>
             )}
           </div>
+          
+          {cert.pdfPath && (
+            <div className="mt-3" style={{ border: "1px solid var(--color-border-dark)" }}>
+              <iframe
+                src={cert.pdfPath}
+                title={`${cert.title} Certificate`}
+                className="w-full h-64 sm:h-96"
+                frameBorder="0"
+              />
+            </div>
+          )}
         </div>
       ))}
     </div>
