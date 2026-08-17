@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import AppContext from "../../context/AppContext";
 
 const hackathons = [
@@ -95,6 +95,10 @@ const hackathons = [
 const Hackathons = ({ isMaximized }) => {
   const { openImage } = useContext(AppContext);
 
+  const shuffledHackathons = useMemo(() => {
+    return [...hackathons].sort(() => Math.random() - 0.5);
+  }, []);
+
   return (
     <div
       className={`flex flex-col gap-6 px-5 sm:px-10 py-6 h-full overflow-y-auto ${
@@ -109,7 +113,7 @@ const Hackathons = ({ isMaximized }) => {
         Hackathons
       </h2>
 
-      {hackathons.map((h, i) => (
+      {shuffledHackathons.map((h, i) => (
         <div
           key={i}
           className="p-4"
