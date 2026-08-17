@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Desktop from "./components/Desktop";
 import AppState from "./context/AppState";
+import Clippy from "./components/UI/Clippy";
 
 function App() {
   useEffect(() => {
@@ -10,6 +11,7 @@ function App() {
     <>
       <AppState>
         <Desktop />
+        <Clippy />
       </AppState>
     </>
   );
