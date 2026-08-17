@@ -92,59 +92,69 @@ const TicTacToe = ({ isMaximized }) => {
 
   return (
     <div 
-      className={`relative flex flex-col items-center justify-center h-full w-full overflow-hidden ${isMaximized ? "pb-20" : ""}`}
+      className={`relative flex flex-col items-center justify-center h-full w-full overflow-y-auto px-4 py-8 ${isMaximized ? "pb-20" : ""}`}
       style={{ background: "var(--color-window-content)", color: "var(--color-text-dark)", fontFamily: "'MS Sans Serif', sans-serif", userSelect: "none" }}
     >
+      <h2 
+        className="text-[28px] font-extrabold mb-2 text-center"
+        style={{ color: "var(--color-text-dark)" }}
+      >
+        Tic Tac Toe
+      </h2>
+      <h3
+        className="text-xl font-bold mb-6 text-center"
+        style={{ color: "var(--color-accent)" }}
+      >
+        Play against the Bot!
+      </h3>
+      
+      <div className="mb-4 h-6 text-base font-bold uppercase" style={{ color: "var(--color-text-dark)" }}>
+        <span>{isXNext ? "Your Turn (X)" : "Bot is thinking... (O)"}</span>
+      </div>
+
       <div 
-        className="p-6 flex flex-col items-center"
+        className="grid grid-cols-3 gap-1 mb-8 p-1" 
         style={{ 
           background: "var(--color-btn-face)", 
-          borderTop: "2px solid var(--color-border-light)", 
-          borderLeft: "2px solid var(--color-border-light)", 
+          borderTop: "2px solid var(--color-border-dark)", 
+          borderLeft: "2px solid var(--color-border-dark)", 
+          borderRight: "2px solid #fff", 
+          borderBottom: "2px solid #fff" 
+        }}
+      >
+        {board.map((cell, index) => (
+          <button
+            key={index}
+            onClick={() => handleClick(index)}
+            className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center text-5xl font-bold hover:opacity-90 active:scale-[0.98] transition-all"
+            style={{
+              background: "var(--color-window-content)",
+              borderTop: "2px solid #fff",
+              borderLeft: "2px solid #fff",
+              borderRight: "2px solid var(--color-border-dark)",
+              borderBottom: "2px solid var(--color-border-dark)",
+              color: cell === "X" ? "var(--color-accent)" : cell === "O" ? "var(--color-btn-face)" : "transparent"
+            }}
+          >
+            {cell}
+          </button>
+        ))}
+      </div>
+
+      <button 
+        onClick={resetGame}
+        className="px-6 py-2 text-sm uppercase font-bold hover:opacity-90 active:scale-95 transition-all"
+        style={{ 
+          background: "var(--color-btn-face)",
+          color: "var(--color-text-light)",
+          borderTop: "2px solid #fff", 
+          borderLeft: "2px solid #fff", 
           borderRight: "2px solid var(--color-border-dark)", 
           borderBottom: "2px solid var(--color-border-dark)" 
         }}
       >
-        <h2 className="text-2xl font-bold mb-4">Tic Tac Toe (vs Bot)</h2>
-        
-        <div className="mb-4 h-6 text-lg font-bold">
-          <span>{isXNext ? "Your Turn (X)" : "Bot is thinking... (O)"}</span>
-        </div>
-
-        <div className="grid grid-cols-3 gap-1 mb-6 p-1" style={{ background: "var(--color-border-dark)", borderTop: "2px solid var(--color-border-dark)", borderLeft: "2px solid var(--color-border-dark)", borderRight: "2px solid var(--color-border-light)", borderBottom: "2px solid var(--color-border-light)" }}>
-          {board.map((cell, index) => (
-            <button
-              key={index}
-              onClick={() => handleClick(index)}
-              className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center text-4xl font-bold active:scale-[0.98]"
-              style={{
-                background: "var(--color-btn-face)",
-                borderTop: "2px solid var(--color-border-light)",
-                borderLeft: "2px solid var(--color-border-light)",
-                borderRight: "2px solid var(--color-border-dark)",
-                borderBottom: "2px solid var(--color-border-dark)",
-                color: cell === "X" ? "var(--color-accent)" : cell === "O" ? "#6a2020" : "black"
-              }}
-            >
-              {cell}
-            </button>
-          ))}
-        </div>
-
-        <button 
-          onClick={resetGame}
-          className="px-6 py-2 font-bold active:scale-95"
-          style={{ 
-            background: "var(--color-btn-face)",
-            borderTop: "2px solid var(--color-border-light)", 
-            borderLeft: "2px solid var(--color-border-light)", 
-            borderRight: "2px solid var(--color-border-dark)", 
-            borderBottom: "2px solid var(--color-border-dark)" 
-          }}
-        >
-          Restart Game
-        </button>
-      </div>
+        Restart Game
+      </button>
 
       {/* Cute Popup Modal */}
       {showPopup && (
@@ -152,22 +162,23 @@ const TicTacToe = ({ isMaximized }) => {
           <div 
             className="p-6 flex flex-col items-center gap-4 text-center max-w-[80%]"
             style={{ 
-              background: "var(--color-btn-face)", 
-              borderTop: "2px solid var(--color-border-light)", 
-              borderLeft: "2px solid var(--color-border-light)", 
+              background: "var(--color-window-content)", 
+              borderTop: "2px solid #fff", 
+              borderLeft: "2px solid #fff", 
               borderRight: "2px solid var(--color-border-dark)", 
               borderBottom: "2px solid var(--color-border-dark)",
               boxShadow: "4px 4px 15px rgba(0,0,0,0.5)"
             }}
           >
-            <h3 className="text-2xl font-bold">{popupMsg}</h3>
+            <h3 className="text-xl font-bold" style={{ color: "var(--color-accent)" }}>{popupMsg}</h3>
             <button 
               onClick={resetGame}
-              className="px-8 py-2 font-bold active:scale-95 mt-2"
+              className="px-6 py-2 text-sm uppercase font-bold active:scale-95 mt-4"
               style={{ 
                 background: "var(--color-btn-face)",
-                borderTop: "2px solid var(--color-border-light)", 
-                borderLeft: "2px solid var(--color-border-light)", 
+                color: "var(--color-text-light)",
+                borderTop: "2px solid #fff", 
+                borderLeft: "2px solid #fff", 
                 borderRight: "2px solid var(--color-border-dark)", 
                 borderBottom: "2px solid var(--color-border-dark)" 
               }}
