@@ -35,7 +35,7 @@ const initialState = {
   Journey:      { ...defaultAppState },
   Socials:      { ...defaultAppState },
   "Terminal.exe": { ...defaultAppState },
-  "HillClimbing.exe": { ...defaultAppState },
+  "TicTacToe.exe": { ...defaultAppState },
   previouslyActiveApp: "",
   taskbarAppStack: [],
   activeImage: null,
