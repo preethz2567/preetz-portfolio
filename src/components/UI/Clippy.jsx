@@ -11,23 +11,40 @@ const tips = [
   "Don't forget to look at my Hackathon experiences!",
 ];
 
-const ClippySVG = () => (
-  <svg width="64" height="80" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Paperclip body */}
-    <path d="M 28 60 L 28 20 C 28 10 42 10 42 20 L 42 55 C 42 70 20 70 20 55 L 20 25 C 20 20 30 20 30 25 L 30 50" stroke="#a0a0a0" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M 28 60 L 28 20 C 28 10 42 10 42 20 L 42 55 C 42 70 20 70 20 55 L 20 25 C 20 20 30 20 30 25 L 30 50" stroke="#e0e0e0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+const PixelPCSVG = () => (
+  <svg width="64" height="80" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ imageRendering: 'pixelated' }}>
+    {/* Monitor Case */}
+    <rect x="8" y="16" width="48" height="40" rx="2" fill="#c0c0c0" stroke="#000000" strokeWidth="2" />
     
+    {/* Screen */}
+    <rect x="14" y="22" width="36" height="26" fill="#008080" stroke="#000000" strokeWidth="2" />
+    
+    {/* Screen Glare */}
+    <polygon points="16,24 24,24 16,32" fill="#ffffff" opacity="0.3" />
+
+    {/* Monitor Stand */}
+    <rect x="24" y="56" width="16" height="8" fill="#c0c0c0" stroke="#000000" strokeWidth="2" />
+    <rect x="16" y="64" width="32" height="6" rx="1" fill="#c0c0c0" stroke="#000000" strokeWidth="2" />
+    <line x1="24" y1="58" x2="40" y2="58" stroke="#a0a0a0" strokeWidth="2" />
+
+    {/* Cute Face */}
     {/* Eyes */}
-    <ellipse cx="27" cy="20" rx="6" ry="8" fill="white" stroke="black" strokeWidth="1.5" />
-    <ellipse cx="40" cy="22" rx="5" ry="7" fill="white" stroke="black" strokeWidth="1.5" />
+    <rect x="22" y="30" width="4" height="4" fill="#ffffff" />
+    <rect x="38" y="30" width="4" height="4" fill="#ffffff" />
     
-    {/* Pupils */}
-    <circle cx="29" cy="20" r="2.5" fill="black" />
-    <circle cx="38" cy="22" r="2" fill="black" />
-    
-    {/* Eyebrows */}
-    <path d="M 20 10 Q 27 5 33 11" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round" />
-    <path d="M 36 12 Q 41 8 46 15" stroke="black" strokeWidth="2" fill="none" strokeLinecap="round" />
+    {/* Blush */}
+    <rect x="18" y="34" width="4" height="4" fill="#ff69b4" opacity="0.6" />
+    <rect x="42" y="34" width="4" height="4" fill="#ff69b4" opacity="0.6" />
+
+    {/* Mouth */}
+    <rect x="26" y="38" width="4" height="2" fill="#ffffff" />
+    <rect x="30" y="40" width="4" height="2" fill="#ffffff" />
+    <rect x="34" y="38" width="4" height="2" fill="#ffffff" />
+
+    {/* Disk Drive & Buttons */}
+    <rect x="40" y="50" width="10" height="2" fill="#000000" />
+    <circle cx="16" cy="51" r="1.5" fill="#000000" />
+    <circle cx="20" cy="51" r="1.5" fill="#000000" />
   </svg>
 );
 
@@ -108,7 +125,7 @@ const Clippy = () => {
           setShowMessage(true);
         }
       }}>
-        <ClippySVG />
+        <PixelPCSVG />
         <button 
           onClick={(e) => {
             e.stopPropagation();
