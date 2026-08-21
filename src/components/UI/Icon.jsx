@@ -33,7 +33,8 @@ const Icon = ({ menu }) => {
         handleOpen();
       }
     } else {
-      // Desktop: single click just focuses
+      // Desktop: single click opens the app
+      handleOpen();
     }
   };
 
