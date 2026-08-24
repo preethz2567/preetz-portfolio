@@ -19,9 +19,10 @@ const ImageViewer = () => {
       >
         <button 
           onClick={closeImage}
-          className="mb-2 px-4 py-2 font-bold text-lg text-white hover:text-gray-300 drop-shadow-md"
+          className="mb-2 px-3 py-1 font-bold text-sm shadow-[inset_1px_1px_0px_white,inset_-1px_-1px_0px_#000] active:shadow-[inset_1px_1px_0px_#000,inset_-1px_-1px_0px_white]"
+          style={{ background: "var(--color-btn-face)", color: "#ffffff", border: "1px solid var(--color-border-dark)" }}
         >
-          ✕ Close
+          X Close
         </button>
         <div className="relative flex items-center justify-center">
           {hasMultiple && (
