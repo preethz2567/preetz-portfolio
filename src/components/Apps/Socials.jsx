@@ -1,40 +1,36 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaEnvelope, FaCode } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaCode, FaWindowClose } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
 const Socials = ({ isMaximized }) => {
   const socialLinks = [
     {
-      name: "LINKEDIN",
-      description: "Connect & Network",
+      name: "LinkedIn.exe",
+      description: "Network & Connect",
       icon: <FaLinkedin />,
       url: "https://www.linkedin.com/in/preethidurgaprasad67",
-      bgGradient: "linear-gradient(135deg, #0077b5 0%, #004182 100%)",
-      glowColor: "rgba(0, 119, 181, 0.5)",
+      color: "#0077b5",
     },
     {
-      name: "GITHUB",
+      name: "GitHub.exe",
       description: "Code & Projects",
       icon: <FaGithub />,
       url: "https://github.com/preethz2567",
-      bgGradient: "linear-gradient(135deg, #333333 0%, #000000 100%)",
-      glowColor: "rgba(51, 51, 51, 0.5)",
+      color: "#333333",
     },
     {
-      name: "LEETCODE",
+      name: "LeetCode.exe",
       description: "Problem Solving",
       icon: <SiLeetcode />,
       url: "https://leetcode.com/u/preethz2567/",
-      bgGradient: "linear-gradient(135deg, #f89f1b 0%, #a86500 100%)",
-      glowColor: "rgba(248, 159, 27, 0.5)",
+      color: "#f89f1b",
     },
     {
-      name: "EMAIL",
+      name: "Email.exe",
       description: "Say Hello",
       icon: <FaEnvelope />,
       url: "mailto:preethidurgaprasad@gmail.com",
-      bgGradient: "linear-gradient(135deg, #ea4335 0%, #991c11 100%)",
-      glowColor: "rgba(234, 67, 53, 0.5)",
+      color: "#d44638",
     },
   ];
 
@@ -52,62 +48,63 @@ const Socials = ({ isMaximized }) => {
         My Socials
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-10 mt-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pb-4 mt-2">
         {socialLinks.map((social, i) => (
-          <a
+          <div
             key={i}
-            href={social.url}
-            target="_blank"
-            rel="noreferrer"
-            className="group relative w-full h-16 sm:h-20 overflow-hidden flex items-center p-3 cursor-pointer"
+            className="flex flex-col"
             style={{
-              background: social.bgGradient,
-              borderTop: "2px solid var(--color-border-dark)",
-              borderLeft: "2px solid var(--color-border-dark)",
-              borderBottom: "2px solid #ffffff",
-              borderRight: "2px solid #ffffff",
-              textDecoration: "none",
-              boxShadow: `0px 4px 10px ${social.glowColor}`,
-              transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out",
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = "scale(1.02) translateY(-4px)";
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = "scale(1) translateY(0px)";
+              background: "#c0c0c0",
+              borderTop: "2px solid #ffffff",
+              borderLeft: "2px solid #ffffff",
+              borderBottom: "2px solid #000000",
+              borderRight: "2px solid #000000",
+              boxShadow: "inset 1px 1px #dfdfdf, inset -1px -1px #808080",
             }}
           >
-            {/* Giant faded background icon */}
-            <div 
-              className="absolute -right-2 top-1/2 -translate-y-1/2 text-white opacity-20 pointer-events-none transition-transform duration-500 group-hover:scale-110"
-              style={{ fontSize: "60px" }}
-            >
-              {social.icon}
+            {/* Fake Title Bar */}
+            <div className="flex justify-between items-center px-1 py-0.5" style={{ background: "#000080", color: "#ffffff" }}>
+              <span className="text-[10px] sm:text-xs font-bold tracking-wide">{social.name}</span>
+              <div className="w-3 h-3 bg-[#c0c0c0] flex items-center justify-center border border-white border-b-black border-r-black">
+                 <span className="text-black text-[8px] font-bold">X</span>
+              </div>
             </div>
 
-            {/* Foreground content */}
-            <div className="relative z-10 flex items-center gap-3 h-full text-white">
-              <div className="text-2xl sm:text-3xl drop-shadow-md">
+            {/* Window Body */}
+            <div className="flex items-center gap-3 p-3">
+              <div className="text-3xl sm:text-4xl" style={{ color: social.color }}>
                 {social.icon}
               </div>
-              <div className="flex flex-col">
-                <h3 className="font-extrabold text-lg sm:text-xl tracking-wider drop-shadow-md">
-                  {social.name}
-                </h3>
-                <p className="font-bold text-[10px] sm:text-xs opacity-90 uppercase tracking-widest drop-shadow-md">
-                  {social.description}
-                </p>
+              <div className="flex flex-col flex-grow">
+                <p className="font-bold text-xs sm:text-sm">{social.description}</p>
+                <a
+                  href={social.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 inline-block text-center text-[10px] sm:text-xs font-bold px-2 py-1 hover:active:border-t-black hover:active:border-l-black hover:active:border-b-white hover:active:border-r-white"
+                  style={{
+                    background: "#c0c0c0",
+                    borderTop: "2px solid #ffffff",
+                    borderLeft: "2px solid #ffffff",
+                    borderBottom: "2px solid #000000",
+                    borderRight: "2px solid #000000",
+                    color: "black",
+                    textDecoration: "none",
+                    width: "fit-content"
+                  }}
+                >
+                  Open ↗
+                </a>
               </div>
             </div>
-
-            {/* "Play" or "Go" button overlay on hover */}
-            <div className="absolute right-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-               <div className="bg-white text-black px-2 py-1 text-[9px] font-bold border border-black shadow-[1px_1px_0_#000]">
-                  OPEN ↗
-               </div>
-            </div>
-          </a>
+          </div>
         ))}
+      </div>
+
+      <div className="mt-2 p-4" style={{ border: "2px dashed var(--color-border-light)", background: "#fafaf9" }}>
+        <p className="text-sm leading-relaxed">
+          <strong>Let's connect!</strong> Feel free to check out my profiles above. Whether you want to review my code on GitHub, see my professional journey on LinkedIn, check my problem-solving stats on LeetCode, or just drop a quick hello via email - I'd love to hear from you!
+        </p>
       </div>
     </div>
   );
