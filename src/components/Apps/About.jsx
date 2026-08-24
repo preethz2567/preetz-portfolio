@@ -83,7 +83,7 @@ const About = ({ isMaximized }) => {
           className="mt-4 px-3 py-1 text-sm bg-gray-200 border border-gray-400 hover:bg-gray-300 transition-colors"
           style={{
             background: "var(--color-btn-face)",
-            color: "var(--color-text-dark)",
+            color: "var(--color-text-light)",
             borderTop: "2px solid #fff",
             borderLeft: "2px solid #fff",
             borderBottom: "2px solid var(--color-border-dark)",
