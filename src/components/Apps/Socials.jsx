@@ -1,34 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope, FaCode } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
 const Socials = ({ isMaximized }) => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
   const socialLinks = [
     {
-      name: "LinkedIn",
-      icon: <FaLinkedin className="w-12 h-12" />,
+      name: "LINKEDIN",
+      description: "Connect & Network",
+      icon: <FaLinkedin />,
       url: "https://www.linkedin.com/in/preethidurgaprasad67",
-      color: "#0077b5",
+      bgGradient: "linear-gradient(135deg, #0077b5 0%, #004182 100%)",
+      glowColor: "rgba(0, 119, 181, 0.5)",
     },
     {
-      name: "GitHub",
-      icon: <FaGithub className="w-12 h-12" />,
+      name: "GITHUB",
+      description: "Code & Projects",
+      icon: <FaGithub />,
       url: "https://github.com/preethz2567",
-      color: "#333",
+      bgGradient: "linear-gradient(135deg, #333333 0%, #000000 100%)",
+      glowColor: "rgba(51, 51, 51, 0.5)",
     },
     {
-      name: "LeetCode",
-      icon: <SiLeetcode className="w-12 h-12" />,
+      name: "LEETCODE",
+      description: "Problem Solving",
+      icon: <SiLeetcode />,
       url: "https://leetcode.com/u/preethz2567/",
-      color: "#f89f1b",
+      bgGradient: "linear-gradient(135deg, #f89f1b 0%, #a86500 100%)",
+      glowColor: "rgba(248, 159, 27, 0.5)",
     },
     {
-      name: "Email",
-      icon: <FaEnvelope className="w-12 h-12" />,
+      name: "EMAIL",
+      description: "Say Hello",
+      icon: <FaEnvelope />,
       url: "mailto:preethidurgaprasad@gmail.com",
-      color: "#d44638",
+      bgGradient: "linear-gradient(135deg, #ea4335 0%, #991c11 100%)",
+      glowColor: "rgba(234, 67, 53, 0.5)",
     },
   ];
 
@@ -37,64 +43,69 @@ const Socials = ({ isMaximized }) => {
       className={`flex flex-col gap-6 px-5 sm:px-10 py-6 h-full overflow-y-auto ${
         isMaximized ? "pb-20" : ""
       }`}
-      style={{ background: "#ffffff", color: "var(--color-text-dark)" }}
+      style={{ background: "var(--color-window-content)", color: "var(--color-text-dark)" }}
     >
-      <div className="flex items-center gap-2 border-b-2 pb-2 mb-4" style={{ borderColor: "var(--color-border-light)" }}>
-        <img src="/assets/socials.png" alt="Address Book" className="w-6 h-6" />
-        <h2 className="text-xl font-bold font-['VT323'] sm:font-sans">
-          Address_Book.exe
-        </h2>
-      </div>
+      <h2
+        className="text-2xl font-bold border-b pb-2"
+        style={{ borderColor: "var(--color-border-light)" }}
+      >
+        My Socials
+      </h2>
 
-      <div className="flex flex-wrap gap-10 justify-center mt-4">
-        {socialLinks.map((social, i) => {
-          const isHovered = hoveredIndex === i;
-          return (
-            <a
-              key={i}
-              href={social.url}
-              target="_blank"
-              rel="noreferrer"
-              className="flex flex-col items-center gap-2 cursor-pointer w-24"
-              style={{ textDecoration: "none" }}
-              onMouseEnter={() => setHoveredIndex(i)}
-              onMouseLeave={() => setHoveredIndex(null)}
+      <div className="flex flex-col gap-8 pb-10 mt-2">
+        {socialLinks.map((social, i) => (
+          <a
+            key={i}
+            href={social.url}
+            target="_blank"
+            rel="noreferrer"
+            className="group relative w-full h-40 sm:h-56 overflow-hidden flex items-center p-6 cursor-pointer"
+            style={{
+              background: social.bgGradient,
+              borderTop: "3px solid var(--color-border-dark)",
+              borderLeft: "3px solid var(--color-border-dark)",
+              borderBottom: "3px solid #ffffff",
+              borderRight: "3px solid #ffffff",
+              textDecoration: "none",
+              boxShadow: `0px 10px 20px ${social.glowColor}`,
+              transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out",
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = "scale(1.02) translateY(-4px)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = "scale(1) translateY(0px)";
+            }}
+          >
+            {/* Giant faded background icon */}
+            <div 
+              className="absolute -right-4 sm:right-10 top-1/2 -translate-y-1/2 text-white opacity-20 pointer-events-none transition-transform duration-500 group-hover:scale-110"
+              style={{ fontSize: "140px", sm: { fontSize: "200px" } }}
             >
-              <div
-                className="flex justify-center items-center p-2"
-                style={{ 
-                  color: social.color,
-                  filter: isHovered ? "drop-shadow(2px 2px 0px rgba(0,0,128,0.3))" : "none",
-                  transform: isHovered ? "scale(1.05)" : "scale(1)",
-                  transition: "all 0.1s ease-in-out"
-                }}
-              >
+              {social.icon}
+            </div>
+
+            {/* Foreground content */}
+            <div className="relative z-10 flex flex-col justify-center h-full text-white">
+              <div className="text-4xl sm:text-6xl mb-2 drop-shadow-lg">
                 {social.icon}
               </div>
-              
-              <div 
-                className="text-xs text-center px-1 border border-transparent"
-                style={{
-                  background: isHovered ? "#000080" : "transparent",
-                  color: isHovered ? "#ffffff" : "var(--color-text-dark)",
-                  borderColor: isHovered ? "#ffffff" : "transparent",
-                  borderStyle: isHovered ? "dotted" : "solid",
-                  borderWidth: "1px"
-                }}
-              >
+              <h3 className="font-extrabold text-2xl sm:text-4xl tracking-wider drop-shadow-md">
                 {social.name}
-              </div>
-            </a>
-          );
-        })}
-      </div>
-      
-      <div className="mt-auto border-t-2 pt-4 flex items-start gap-3" style={{ borderColor: "var(--color-border-light)", color: "var(--color-text-dark)" }}>
-         <div className="w-8 h-8 flex-shrink-0 bg-[#000080] text-white flex items-center justify-center font-bold text-xl border-2 border-white shadow-[1px_1px_0_#000]">!</div>
-         <div>
-           <p className="text-sm font-bold">Network Connection Established.</p>
-           <p className="text-xs mt-1">Double-click an icon above to connect with me across the web.</p>
-         </div>
+              </h3>
+              <p className="font-bold text-sm sm:text-lg opacity-90 mt-1 uppercase tracking-widest drop-shadow-md">
+                {social.description}
+              </p>
+            </div>
+
+            {/* "Play" or "Go" button overlay on hover */}
+            <div className="absolute right-6 bottom-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+               <div className="bg-white text-black px-4 py-2 text-xs font-bold border-2 border-black shadow-[2px_2px_0_#000]">
+                  OPEN LINK ↗
+               </div>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   );
