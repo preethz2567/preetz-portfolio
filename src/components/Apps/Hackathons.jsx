@@ -1,105 +1,82 @@
 import { useContext, useMemo } from "react";
 import AppContext from "../../context/AppContext";
 
+// Dynamically import all hackathon images from the public folder
+const rawImages = import.meta.glob('/public/assets/images/hackathon*.{jpg,jpeg,png}', { eager: true });
+// Clean up the paths to be usable as src URLs
+const allImageUrls = Object.keys(rawImages).map(path => path.replace('/public', ''));
+
 const hackathons = [
   {
+    prefix: "hackathon1",
     placement: "🏆 Winner",
     name: "Ossome Hacks 3.0",
     organizer: "GitHub Community SRM",
     year: "2026",
-    images: [
-      "/assets/images/hackathon1-img1.jpg",
-      "/assets/images/hackathon1-img2.jpg",
-      "/assets/images/hackathon1-img3.jpg",
-      "/assets/images/hackathon1-img4.jpg",
-    ],
   },
   {
+    prefix: "hackathon2",
     placement: "🏆 Winner",
     name: "Codeathon 4.0",
     organizer: "Prathyusha Engineering College",
     year: "",
     longDescription: "My first-ever external hackathon experience ended with a 1st Prize victory! This event taught me a crucial lesson: step out of your comfort zone, ignore the noise in the room, and focus purely on observing, learning, and building something excellent.",
-    images: [
-      "/assets/images/hackathon2-img1.jpg",
-      "/assets/images/hackathon2-img2.jpg",
-      "/assets/images/hackathon2-img3.jpg",
-      "/assets/images/hackathon2-img4.jpg",
-    ],
   },
   {
+    prefix: "hackathon3",
     placement: "🏆 Winner",
     name: "TechXora",
     organizer: "Agni Institute of Technology",
     year: "",
-    images: [
-      "/assets/images/hackathon3-img1.jpg",
-      "/assets/images/hackathon3-img2.jpg",
-      "/assets/images/hackathon3-img3.jpg",
-      "/assets/images/hackathon3-img4.jpg",
-    ],
   },
   {
+    prefix: "hackathon4",
     placement: "🏆 Winner",
     name: "Hack Hustle",
     organizer: "Saveetha Engineering College",
     year: "",
     longDescription: "Collaborated with a brilliant team of four to build a winning solution, securing 1st Prize and a ₹20,000 cash award. My biggest takeaway? The code is only as strong as its foundation—always map out the architecture before writing a single line.",
-    images: [
-      "/assets/images/hackathon4-img1.jpg",
-      "/assets/images/hackathon4-img2.jpg",
-      "/assets/images/hackathon4-img3.jpg",
-      "/assets/images/hackathon4-img4.jpg",
-    ],
   },
   {
+    prefix: "hackathon5",
     name: "TechRitz, RIT Institute of Technology",
-    description:
-      "Participation.",
-    images: [
-      "/assets/images/hackathon5-img1.jpeg",
-      "/assets/images/hackathon5-img2.jpeg",
-    ],
+    description: "Participation.",
   },
   {
+    prefix: "hackathon6",
     name: "IBM Datathon by Shooting Stars Foundation",
-    description:
-      "Data science and analytics competition.",
-    images: [
-      "/assets/images/hackathon6-img1.jpeg",
-      "/assets/images/hackathon6-img2.jpeg",
-    ],
+    description: "Data science and analytics competition.",
   },
   {
+    prefix: "hackathon7",
     name: "Smart India Hackathon, SIH2025 Internal Round",
-    description:
-      "National level hackathon internal selection round.",
-    images: [
-      "/assets/images/hackathon7-img1.jpeg",
-      "/assets/images/hackathon7-img2.jpeg",
-      "/assets/images/hackathon7-img3.jpeg",
-    ],
+    description: "National level hackathon internal selection round.",
   },
   {
+    prefix: "hackathon8",
     placement: "🏆 1st Prize",
     name: "SheBuilds x CCCL Hack",
     organizer: "Intellexa REC, powered by Claude Code Central London",
     year: "2026",
     longDescription: "All women hackathon. Built Muthirai, an enterprise-grade brand identity enforcement and drift analytics platform acting as a cryptographic seal of authenticity.",
-    images: [
-      "/assets/images/hackathon8-img1.jpg",
-      "/assets/images/hackathon8-img2.jpg",
-      "/assets/images/hackathon8-img3.jpg",
-    ],
   },
 ];
 
 const Hackathons = ({ isMaximized }) => {
   const { openImage } = useContext(AppContext);
 
-  const shuffledHackathons = useMemo(() => {
-    return [...hackathons].sort(() => Math.random() - 0.5);
+  // Map the dynamically loaded images to each hackathon
+  const hackathonsWithImages = useMemo(() => {
+    return hackathons.map((h) => {
+      // Find all images that match this hackathon's prefix
+      const images = allImageUrls.filter(url => url.includes(`/assets/images/${h.prefix}-`));
+      return { ...h, images };
+    });
   }, []);
+
+  const shuffledHackathons = useMemo(() => {
+    return [...hackathonsWithImages].sort(() => Math.random() - 0.5);
+  }, [hackathonsWithImages]);
 
   return (
     <div
