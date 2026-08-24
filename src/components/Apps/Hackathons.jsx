@@ -19,7 +19,7 @@ const hackathons = [
     name: "Codeathon 4.0",
     organizer: "Prathyusha Engineering College",
     year: "",
-    longDescription: "My first external hackathon where we won first prize! Key takeaway: step out of your shell, don't get demotivated by the room around you, observe, take notes, and excel.",
+    longDescription: "My first-ever external hackathon experience ended with a 1st Prize victory! This event taught me a crucial lesson: step out of your comfort zone, ignore the noise in the room, and focus purely on observing, learning, and building something excellent.",
     images: [
       "/assets/images/hackathon2%20-%20img1.jpg",
       "/assets/images/hackathon2-img2.jpg",
@@ -44,7 +44,7 @@ const hackathons = [
     name: "Hack Hustle",
     organizer: "Saveetha Engineering College",
     year: "",
-    longDescription: "Participated with a team of 4 friends. Won first prize and a ₹20k cash award! Key takeaway: always discuss architecture before you start to build.",
+    longDescription: "Collaborated with a brilliant team of four to build a winning solution, securing 1st Prize and a ₹20,000 cash award. My biggest takeaway? The code is only as strong as its foundation—always map out the architecture before writing a single line.",
     images: [
       "/assets/images/hackathon4-img1.jpg",
       "/assets/images/hackathon4-img2.jpg",
