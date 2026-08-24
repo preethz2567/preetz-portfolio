@@ -76,7 +76,7 @@ const Skills = ({ isMaximized }) => {
                 key={j}
                 className="flex items-center gap-2 px-3 py-1.5 text-sm cursor-default"
                 style={{
-                  background: "var(--color-btn-face)",
+                  background: "#e8e8e6",
                   borderTop: "2px solid #ffffff",
                   borderLeft: "2px solid #ffffff",
                   borderBottom: "2px solid var(--color-border-dark)",
