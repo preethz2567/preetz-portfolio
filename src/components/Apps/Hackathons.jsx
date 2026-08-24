@@ -8,7 +8,7 @@ const hackathons = [
     organizer: "GitHub Community SRM",
     year: "2026",
     images: [
-      "/assets/images/hackathon1-%20img1.jpg",
+      "/assets/images/hackathon1-img1.jpg",
       "/assets/images/hackathon1-img2.jpg",
       "/assets/images/hackathon1-img3.jpg",
       "/assets/images/hackathon1-img4.jpg",
@@ -21,7 +21,7 @@ const hackathons = [
     year: "",
     longDescription: "My first-ever external hackathon experience ended with a 1st Prize victory! This event taught me a crucial lesson: step out of your comfort zone, ignore the noise in the room, and focus purely on observing, learning, and building something excellent.",
     images: [
-      "/assets/images/hackathon2%20-%20img1.jpg",
+      "/assets/images/hackathon2-img1.jpg",
       "/assets/images/hackathon2-img2.jpg",
       "/assets/images/hackathon2-img3.jpg",
       "/assets/images/hackathon2-img4.jpg",
