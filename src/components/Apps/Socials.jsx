@@ -59,15 +59,15 @@ const Socials = ({ isMaximized }) => {
             href={social.url}
             target="_blank"
             rel="noreferrer"
-            className="group relative w-full h-40 sm:h-56 overflow-hidden flex items-center p-6 cursor-pointer"
+            className="group relative w-full h-20 sm:h-24 overflow-hidden flex items-center p-4 cursor-pointer"
             style={{
               background: social.bgGradient,
-              borderTop: "3px solid var(--color-border-dark)",
-              borderLeft: "3px solid var(--color-border-dark)",
-              borderBottom: "3px solid #ffffff",
-              borderRight: "3px solid #ffffff",
+              borderTop: "2px solid var(--color-border-dark)",
+              borderLeft: "2px solid var(--color-border-dark)",
+              borderBottom: "2px solid #ffffff",
+              borderRight: "2px solid #ffffff",
               textDecoration: "none",
-              boxShadow: `0px 10px 20px ${social.glowColor}`,
+              boxShadow: `0px 4px 10px ${social.glowColor}`,
               transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out",
             }}
             onMouseOver={(e) => {
@@ -79,29 +79,31 @@ const Socials = ({ isMaximized }) => {
           >
             {/* Giant faded background icon */}
             <div 
-              className="absolute -right-4 sm:right-10 top-1/2 -translate-y-1/2 text-white opacity-20 pointer-events-none transition-transform duration-500 group-hover:scale-110"
-              style={{ fontSize: "140px", sm: { fontSize: "200px" } }}
+              className="absolute -right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white opacity-20 pointer-events-none transition-transform duration-500 group-hover:scale-110"
+              style={{ fontSize: "80px" }}
             >
               {social.icon}
             </div>
 
             {/* Foreground content */}
-            <div className="relative z-10 flex flex-col justify-center h-full text-white">
-              <div className="text-4xl sm:text-6xl mb-2 drop-shadow-lg">
+            <div className="relative z-10 flex items-center gap-4 h-full text-white">
+              <div className="text-3xl sm:text-4xl drop-shadow-md">
                 {social.icon}
               </div>
-              <h3 className="font-extrabold text-2xl sm:text-4xl tracking-wider drop-shadow-md">
-                {social.name}
-              </h3>
-              <p className="font-bold text-sm sm:text-lg opacity-90 mt-1 uppercase tracking-widest drop-shadow-md">
-                {social.description}
-              </p>
+              <div className="flex flex-col">
+                <h3 className="font-extrabold text-xl sm:text-2xl tracking-wider drop-shadow-md">
+                  {social.name}
+                </h3>
+                <p className="font-bold text-xs sm:text-sm opacity-90 uppercase tracking-widest drop-shadow-md">
+                  {social.description}
+                </p>
+              </div>
             </div>
 
             {/* "Play" or "Go" button overlay on hover */}
-            <div className="absolute right-6 bottom-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-               <div className="bg-white text-black px-4 py-2 text-xs font-bold border-2 border-black shadow-[2px_2px_0_#000]">
-                  OPEN LINK ↗
+            <div className="absolute right-4 bottom-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+               <div className="bg-white text-black px-2 py-1 text-[10px] font-bold border border-black shadow-[1px_1px_0_#000]">
+                  OPEN ↗
                </div>
             </div>
           </a>
