@@ -52,14 +52,14 @@ const Socials = ({ isMaximized }) => {
         My Socials
       </h2>
 
-      <div className="flex flex-col gap-8 pb-10 mt-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-10 mt-2">
         {socialLinks.map((social, i) => (
           <a
             key={i}
             href={social.url}
             target="_blank"
             rel="noreferrer"
-            className="group relative w-full h-20 sm:h-24 overflow-hidden flex items-center p-4 cursor-pointer"
+            className="group relative w-full h-16 sm:h-20 overflow-hidden flex items-center p-3 cursor-pointer"
             style={{
               background: social.bgGradient,
               borderTop: "2px solid var(--color-border-dark)",
@@ -79,30 +79,30 @@ const Socials = ({ isMaximized }) => {
           >
             {/* Giant faded background icon */}
             <div 
-              className="absolute -right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white opacity-20 pointer-events-none transition-transform duration-500 group-hover:scale-110"
-              style={{ fontSize: "80px" }}
+              className="absolute -right-2 top-1/2 -translate-y-1/2 text-white opacity-20 pointer-events-none transition-transform duration-500 group-hover:scale-110"
+              style={{ fontSize: "60px" }}
             >
               {social.icon}
             </div>
 
             {/* Foreground content */}
-            <div className="relative z-10 flex items-center gap-4 h-full text-white">
-              <div className="text-3xl sm:text-4xl drop-shadow-md">
+            <div className="relative z-10 flex items-center gap-3 h-full text-white">
+              <div className="text-2xl sm:text-3xl drop-shadow-md">
                 {social.icon}
               </div>
               <div className="flex flex-col">
-                <h3 className="font-extrabold text-xl sm:text-2xl tracking-wider drop-shadow-md">
+                <h3 className="font-extrabold text-lg sm:text-xl tracking-wider drop-shadow-md">
                   {social.name}
                 </h3>
-                <p className="font-bold text-xs sm:text-sm opacity-90 uppercase tracking-widest drop-shadow-md">
+                <p className="font-bold text-[10px] sm:text-xs opacity-90 uppercase tracking-widest drop-shadow-md">
                   {social.description}
                 </p>
               </div>
             </div>
 
             {/* "Play" or "Go" button overlay on hover */}
-            <div className="absolute right-4 bottom-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-               <div className="bg-white text-black px-2 py-1 text-[10px] font-bold border border-black shadow-[1px_1px_0_#000]">
+            <div className="absolute right-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+               <div className="bg-white text-black px-2 py-1 text-[9px] font-bold border border-black shadow-[1px_1px_0_#000]">
                   OPEN ↗
                </div>
             </div>
