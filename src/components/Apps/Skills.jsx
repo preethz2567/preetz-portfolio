@@ -4,6 +4,7 @@ import { SiC, SiSpringboot, SiHibernate, SiApachekafka, SiRailway, SiVercel, SiA
 const skillCategories = [
   {
     label: "Languages",
+    description: "My primary language is Java, but I am quite familiar with Python and C. I can quickly adapt to new languages and paradigms as required.",
     skills: [
       { name: "Java", icon: <FaJava className="w-4 h-4" color="#007396" /> },
       { name: "Python", icon: <FaPython className="w-4 h-4" color="#3776AB" /> },
@@ -13,6 +14,7 @@ const skillCategories = [
   },
   {
     label: "Frameworks",
+    description: "I mostly build enterprise applications using Java Spring Boot. I am also familiar with React JS, and have experience implementing Kafka messaging queues and system design concepts.",
     skills: [
       { name: "Spring Boot", icon: <SiSpringboot className="w-4 h-4" color="#6DB33F" /> },
       { name: "Hibernate", icon: <SiHibernate className="w-4 h-4" color="#59666C" /> },
@@ -22,6 +24,7 @@ const skillCategories = [
   },
   {
     label: "Cloud / DevOps",
+    description: "I'm actively exploring AWS services, deployments, and code pipelines. For smaller projects, I use Vercel for static pages, and Railway or Render for backend hosting.",
     skills: [
       { name: "AWS", icon: <FaAws className="w-4 h-4" color="#FF9900" /> },
       { name: "Railway", icon: <SiRailway className="w-4 h-4" color="#0B0D0E" /> },
@@ -30,6 +33,7 @@ const skillCategories = [
   },
   {
     label: "Tools",
+    description: "I rely on Git and GitHub for version control. My daily toolkit includes IDEs like VS Code and Eclipse, along with Maven and Postman for building and testing APIs.",
     skills: [
       { name: "Git", icon: <FaGitAlt className="w-4 h-4" color="#F05032" /> },
       { name: "GitHub", icon: <FaGithub className="w-4 h-4" color="#181717" /> },
@@ -41,6 +45,7 @@ const skillCategories = [
   },
   {
     label: "Database",
+    description: "I have strong foundational knowledge of relational databases. I actively use MySQL to design schemas, write efficient queries, and manage data.",
     skills: [
       { name: "MySQL", icon: <SiMysql className="w-4 h-4" color="#4479A1" /> },
     ],
@@ -65,11 +70,16 @@ const Skills = ({ isMaximized }) => {
       {skillCategories.map((cat, i) => (
         <div key={i} className="mb-2">
           <h3
-            className="text-sm font-bold uppercase mb-3"
+            className="text-sm font-bold uppercase mb-1"
             style={{ color: "var(--color-accent)" }}
           >
             {cat.label}
           </h3>
+          {cat.description && (
+            <p className="text-xs mb-3 text-gray-700 leading-relaxed max-w-[600px]">
+              {cat.description}
+            </p>
+          )}
           <div className="flex flex-wrap gap-3">
             {cat.skills.map((skill, j) => (
               <span
