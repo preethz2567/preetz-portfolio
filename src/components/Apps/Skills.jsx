@@ -4,7 +4,7 @@ import { SiC, SiSpringboot, SiHibernate, SiApachekafka, SiRailway, SiVercel, SiA
 const skillCategories = [
   {
     label: "Languages",
-    description: "My primary language is Java, but I am quite familiar with Python and C. I can quickly adapt to new languages and paradigms as required.",
+    description: "Java is my daily driver, but I'm highly comfortable navigating Python and C codebases. Ultimately, I view languages as tools and adapt rapidly to whatever the stack demands.",
     skills: [
       { name: "Java", icon: <FaJava className="w-4 h-4" color="#007396" /> },
       { name: "Python", icon: <FaPython className="w-4 h-4" color="#3776AB" /> },
@@ -14,7 +14,7 @@ const skillCategories = [
   },
   {
     label: "Frameworks",
-    description: "I mostly build enterprise applications using Java Spring Boot. I am also familiar with React JS, and have experience implementing Kafka messaging queues and system design concepts.",
+    description: "My core expertise lies in building scalable enterprise backends with Spring Boot. I'm also well-versed in bridging the gap to the frontend with React, and designing event-driven systems using Kafka.",
     skills: [
       { name: "Spring Boot", icon: <SiSpringboot className="w-4 h-4" color="#6DB33F" /> },
       { name: "Hibernate", icon: <SiHibernate className="w-4 h-4" color="#59666C" /> },
@@ -24,7 +24,7 @@ const skillCategories = [
   },
   {
     label: "Cloud / DevOps",
-    description: "I'm actively exploring AWS services, deployments, and code pipelines. For smaller projects, I use Vercel for static pages, and Railway or Render for backend hosting.",
+    description: "I have hands-on experience provisioning AWS environments and setting up deployment pipelines. For rapid prototyping, Vercel and Railway are my go-to platforms.",
     skills: [
       { name: "AWS", icon: <FaAws className="w-4 h-4" color="#FF9900" /> },
       { name: "Railway", icon: <SiRailway className="w-4 h-4" color="#0B0D0E" /> },
@@ -33,7 +33,7 @@ const skillCategories = [
   },
   {
     label: "Tools",
-    description: "I rely on Git and GitHub for version control. My daily toolkit includes IDEs like VS Code and Eclipse, along with Maven and Postman for building and testing APIs.",
+    description: "Version control with Git and GitHub is second nature to me. I rely on VS Code and Eclipse as my primary environments, using Postman to test and validate APIs.",
     skills: [
       { name: "Git", icon: <FaGitAlt className="w-4 h-4" color="#F05032" /> },
       { name: "GitHub", icon: <FaGithub className="w-4 h-4" color="#181717" /> },
@@ -45,7 +45,7 @@ const skillCategories = [
   },
   {
     label: "Database",
-    description: "I have strong foundational knowledge of relational databases. I actively use MySQL to design schemas, write efficient queries, and manage data.",
+    description: "I build robust data foundations. I'm proficient in designing structured relational schemas and writing optimized queries using MySQL.",
     skills: [
       { name: "MySQL", icon: <SiMysql className="w-4 h-4" color="#4479A1" /> },
     ],
