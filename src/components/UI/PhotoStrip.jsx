@@ -1,39 +1,8 @@
 import React from "react";
 import "./PhotoStrip.css";
 
-const allImages = [
-  "/assets/images/community-img1.jpg",
-  "/assets/images/community-img2.jpg",
-  "/assets/images/community-img3.jpg",
-  "/assets/images/community-img4.jpg",
-  "/assets/images/community-img5.jpg",
-  "/assets/images/community-img6.jpg",
-  "/assets/images/community-img7.jpg",
-  "/assets/images/hackathon1- img1.jpg",
-  "/assets/images/hackathon1-img2.jpg",
-  "/assets/images/hackathon1-img3.jpg",
-  "/assets/images/hackathon1-img4.jpg",
-  "/assets/images/hackathon2 - img1.jpg",
-  "/assets/images/hackathon2-img2.jpg",
-  "/assets/images/hackathon2-img3.jpg",
-  "/assets/images/hackathon2-img4.jpg",
-  "/assets/images/hackathon3-img1.jpg",
-  "/assets/images/hackathon3-img2.jpg",
-  "/assets/images/hackathon3-img3.jpg",
-  "/assets/images/hackathon3-img4.jpg",
-  "/assets/images/intern1-img1.jpg",
-  "/assets/images/intern1-img2.jpg",
-  "/assets/images/intern1-img3.jpg",
-  "/assets/images/intern2-img1.png",
-  "/assets/images/hackathon5-img1.jpeg",
-  "/assets/images/hackathon5-img2.jpeg",
-  "/assets/images/hackathon6-img1.jpeg",
-  "/assets/images/hackathon6-img2.jpeg",
-  "/assets/images/hackathon7-img1.jpeg",
-  "/assets/images/hackathon7-img2.jpeg",
-  "/assets/images/hackathon7-img3.jpeg",
-  "/assets/images/community-img8.jpeg",
-];
+const rawImages = import.meta.glob('/public/assets/images/*.{jpg,jpeg,png}', { eager: true });
+const allImages = Object.keys(rawImages).map(path => path.replace('/public', ''));
 
 const shuffle = (array) => {
   let currentIndex = array.length,  randomIndex;
