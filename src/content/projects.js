@@ -32,5 +32,20 @@ export const projects = [
         websiteLink: "https://url-sm.netlify.app/",
         techStack: [react, tailwindCss, expressJs, mongoDb]
     },
-
+    {
+        name: "Edhir",
+        imagePath: "/assets/projects.png",
+        description: "Edhir project.",
+        githubLink: "#",
+        websiteLink: "#",
+        techStack: []
+    },
+    {
+        name: "Aegis",
+        imagePath: "/assets/projects.png",
+        description: "Aegis project.",
+        githubLink: "#",
+        websiteLink: "#",
+        techStack: []
+    }
 ]
