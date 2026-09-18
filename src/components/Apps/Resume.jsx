@@ -1,4 +1,4 @@
-const resumeUrl = "/assets/Resume/PreethiResume.pdf";
+const resumeUrl = "/assets/Resume/Preethi_D-Resume.pdf";
 
 const Resume = ({ isMaximized }) => {
   return (
