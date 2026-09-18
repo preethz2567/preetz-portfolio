@@ -51,6 +51,7 @@ const hackathons = [
     prefix: "hackathon7",
     name: "Smart India Hackathon, SIH2025 Internal Round",
     description: "National level hackathon internal selection round.",
+    longDescription: "An exceptional collaborative experience with my teammates. Navigating through multiple internal presentation judging rounds before advancing to the national zonals underscored a crucial takeaway: the immense power of a well-crafted pitch deck as a compelling visual storyteller."
   },
   {
     prefix: "hackathon8",
