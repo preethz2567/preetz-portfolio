@@ -42,7 +42,7 @@ const hackathons = [
   {
     prefix: "hackathon5",
     name: "TechRitz, RIT Institute of Technology",
-    description: "Participation.",
+    description: "Participated in an ideathon as part of the TechRitz college symposium at RIT College.",
   },
   {
     prefix: "hackathon6",
