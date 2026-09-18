@@ -28,6 +28,7 @@ const hackathons = [
     name: "TechXora",
     organizer: "Agni Institute of Technology",
     year: "",
+    longDescription: "We developed a cybersecurity project focused on detecting anomalies based on digital fingerprints. Hearing our all-girls team, Cypher, announced on stage as the winners filled us with immense pride and joy—a truly unforgettable moment bringing home the trophy!"
   },
   {
     prefix: "hackathon4",
