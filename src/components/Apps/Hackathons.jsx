@@ -46,8 +46,8 @@ const hackathons = [
   },
   {
     prefix: "hackathon6",
-    name: "IBM Datathon by Shooting Stars Foundation",
-    longDescription: "Data science and analytics competition.",
+    name: "IBM Datathon 2025 by Shooting Stars Foundation",
+    longDescription: "Participating in the 2025 edition was a fantastic full-circle moment! The 2024 IBM Datathon was my very first event, and fast-forward to 2025, I could see a massive improvement in my skills. I figured out how to build and make things work much more effectively. Although we didn't take home the win, I had an absolute blast and truly loved the building process.",
   },
   {
     prefix: "hackathon7",
