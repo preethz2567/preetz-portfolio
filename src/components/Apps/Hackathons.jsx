@@ -42,12 +42,12 @@ const hackathons = [
   {
     prefix: "hackathon5",
     name: "TechRitz, RIT Institute of Technology",
-    description: "Participated in an ideathon as part of the TechRitz college symposium at RIT College.",
+    longDescription: "Participated in an ideathon as part of the TechRitz college symposium at RIT College.",
   },
   {
     prefix: "hackathon6",
     name: "IBM Datathon by Shooting Stars Foundation",
-    description: "Data science and analytics competition.",
+    longDescription: "Data science and analytics competition.",
   },
   {
     prefix: "hackathon7",
