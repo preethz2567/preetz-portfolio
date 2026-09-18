@@ -13,6 +13,7 @@ const hackathons = [
     name: "Ossome Hacks 3.0",
     organizer: "GitHub Community SRM",
     year: "2026",
+    longDescription: "Taking home the win as Team ZERO was an absolute blast! This victory was extra special because I teamed up with Joseph, my day-one coding buddy. From our very first days in college figuring out HTML together, to proudly standing on the winning stage for building an advanced multi-agent system—what an incredible, joy-filled journey it has been!"
   },
   {
     prefix: "hackathon2",
