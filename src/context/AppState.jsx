@@ -32,7 +32,7 @@ const initialState = {
   Competitions: { ...defaultAppState },
   Certifications: { ...defaultAppState },
   Resume:       { ...defaultAppState },
-  Journey:      { ...defaultAppState },
+
   Socials:      { ...defaultAppState },
   "Terminal.exe": { ...defaultAppState },
   previouslyActiveApp: "",

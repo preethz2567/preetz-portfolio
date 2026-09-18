@@ -12,7 +12,7 @@ import Hackathons from "./Apps/Hackathons";
 import Competitions from "./Apps/Competitions";
 import Certifications from "./Apps/Certifications";
 import Resume from "./Apps/Resume";
-import Journey from "./Apps/Journey";
+
 import Socials from "./Apps/Socials";
 import Terminal from "./Apps/Terminal";
 // Build a lookup: appName → { component, menuIndex }
@@ -29,7 +29,7 @@ const AppContentMap = {
   Competitions: Competitions,
   Certifications: Certifications,
   Resume:       Resume,
-  Journey:      Journey,
+
   Socials:      Socials,
   "Terminal.exe": Terminal,
 };

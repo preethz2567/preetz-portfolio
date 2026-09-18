@@ -69,13 +69,7 @@ export const Menu = [
         headerIconSize: "h-[22px] w-[22px]",
         startIconSize: "w-[22px] h-[22px]"
     },
-    {
-        name: "Journey",
-        path: "/assets/projects.png",
-        deskIconSize: "w-[42px] h-[42px]",
-        headerIconSize: "h-[22px] w-[22px]",
-        startIconSize: "w-[22px] h-[22px]"
-    },
+
     {
         name: "Socials",
         path: "/assets/projects.png",
