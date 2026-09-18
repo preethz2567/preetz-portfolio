@@ -6,7 +6,7 @@ const Resume = ({ isMaximized }) => {
       className="flex flex-col h-full"
       style={{ background: "var(--color-window-content)", color: "var(--color-text-dark)" }}
     >
-      {/* Embedded PDF viewer — fills the window */}
+      {/* Embedded PDF viewer - fills the window */}
       <iframe
         src={resumeUrl}
         title="Resume"

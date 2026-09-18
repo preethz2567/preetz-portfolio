@@ -13,7 +13,7 @@ const hackathons = [
     name: "Ossome Hacks 3.0",
     organizer: "GitHub Community SRM",
     year: "2026",
-    longDescription: "Taking home the win as Team ZERO was an absolute blast! This victory was extra special because I teamed up with Joseph, my day-one coding buddy. From our very first days in college figuring out HTML together, to proudly standing on the winning stage for building an advanced multi-agent system—what an incredible, joy-filled journey it has been!"
+    longDescription: "Taking home the win as Team ZERO was an absolute blast! This victory was extra special because I teamed up with Joseph, my day-one coding buddy. From our very first days in college figuring out HTML together, to proudly standing on the winning stage for building an advanced multi-agent system-what an incredible, joy-filled journey it has been!"
   },
   {
     prefix: "hackathon2",
@@ -29,7 +29,7 @@ const hackathons = [
     name: "TechXora",
     organizer: "Agni Institute of Technology",
     year: "",
-    longDescription: "We developed a cybersecurity project focused on detecting anomalies based on digital fingerprints. Hearing our all-girls team, Cypher, announced on stage as the winners filled us with immense pride and joy—a truly unforgettable moment bringing home the trophy!"
+    longDescription: "We developed a cybersecurity project focused on detecting anomalies based on digital fingerprints. Hearing our all-girls team, Cypher, announced on stage as the winners filled us with immense pride and joy-a truly unforgettable moment bringing home the trophy!"
   },
   {
     prefix: "hackathon4",
@@ -37,7 +37,7 @@ const hackathons = [
     name: "Hack Hustle",
     organizer: "Saveetha Engineering College",
     year: "",
-    longDescription: "Collaborated with a brilliant team of four to build a winning solution, securing 1st Prize and a ₹20,000 cash award. My biggest takeaway? The code is only as strong as its foundation—always map out the architecture before writing a single line.",
+    longDescription: "Collaborated with a brilliant team of four to build a winning solution, securing 1st Prize and a ₹20,000 cash award. My biggest takeaway? The code is only as strong as its foundation-always map out the architecture before writing a single line.",
   },
   {
     prefix: "hackathon5",

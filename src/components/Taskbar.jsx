@@ -44,7 +44,7 @@ const Taskbar = () => {
             style={{ borderLeft: "1px solid var(--color-border-dark)", borderRight: "1px solid #0e0f12" }}
           />
 
-          {/* Open app buttons — driven by Menu so no per-app hardcoding */}
+          {/* Open app buttons - driven by Menu so no per-app hardcoding */}
           {Menu.map((menu) => {
             const appState = state[menu.name];
             if (!appState?.open) return null;

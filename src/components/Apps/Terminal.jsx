@@ -89,8 +89,8 @@ const Terminal = ({ isMaximized }) => {
 > [WIN]  HackHustle 2.0 at SEC
 > [FINALIST] ImpactForge, IIT Madras`;
         } else if (lowerCmd === "experience --timeline") {
-            output = `> [2026] Presidio — Mentor-led SDE Internship (Backend, Frontend, DevOps, AI/LLM)
-> [2026] IntakeOff.AI — SDE Intern, DevOps (CI/CD, Railway/Vercel, Redis)`;
+            output = `> [2026] Presidio - Mentor-led SDE Internship (Backend, Frontend, DevOps, AI/LLM)
+> [2026] IntakeOff.AI - SDE Intern, DevOps (CI/CD, Railway/Vercel, Redis)`;
         } else if (lowerCmd === "projects --top") {
             output = `> 1. AI-Powered RAG System (Flask, FAISS, LLM) - Enterprise-grade semantic search
 > 2. Full-Stack E-Commerce (Spring Boot, React, AWS RDS) - Scalable microservices

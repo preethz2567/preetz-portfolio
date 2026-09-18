@@ -99,7 +99,7 @@ const Experience = ({ isMaximized }) => {
           IntakeOff.AI
         </p>
         <p className="text-base mb-3">
-          Early-stage AI startup — CI/CD pipelines, Railway &amp; Vercel
+          Early-stage AI startup - CI/CD pipelines, Railway &amp; Vercel
           deployments, GitHub branch management.
         </p>
         <div className="mt-2 text-base italic" style={{ color: "#888" }}>

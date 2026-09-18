@@ -31,7 +31,7 @@ const Competitions = ({ isMaximized }) => {
         className="text-xs italic"
         style={{ color: "#888" }}
       >
-        Competitions are distinct from hackathons — these are structured technical
+        Competitions are distinct from hackathons - these are structured technical
         contests, not build-sprint events.
       </p>
 
